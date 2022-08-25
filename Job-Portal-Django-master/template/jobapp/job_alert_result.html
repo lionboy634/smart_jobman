@@ -1,0 +1,229 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <section class="section-hero overlay inner-page bg-image"
+  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-white font-weight-bold">JOB ALERT RESULTS</h1>
+       
+      </div>
+    </div>
+  </div>
+</section>
+<div class="content_div p-5">
+  <!-- SEARCH PART -->
+  <!--/ SEARCH PART -->
+      <!-- main_container starts here -->
+      <div class="row mar_lr_0 main_container">
+        <div class="container">
+
+
+          <div class="row ">
+            <div class="col-md-4">
+              <!-- side_filter_section starts here -->
+              <div class="row">
+
+                <!-- job_list_section starts here -->
+                <div class="col-md-12">
+                <!--job_alert_result_container starts heere -->
+          <a href="{% url 'jobapp:job-alert' %}" target="_blank" class="add_new_alert pull-right">Add New Job Alert</a>                  <div class="clearfix"></div>
+                  <div class="job_alert_result_container">
+                <div class="pull-right actions">
+                  <a href="{% url 'jobapp:home' %}" class="edit"><i class="fa fa-edit"></i></a>
+                  <a href="#" class="alert-delete del" id="{{ job_alert.id }}"><i class="fa fa-trash"></i></a>
+                </div>
+                <div class="title">{{ job_alert.name }}</div>
+                <div class="detail_container">
+                  <div class="detail">
+                    <div class="detail_title">Email <span class="pull-right">:</span></div>
+                    <div class="detail_content">{{ job_alert.email }}</div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Skill(s) <span class="pull-right">:</span></div>
+                    <div class="detail_content">
+                      {% for skill in job_alert.skill.all %}
+                      <a href="{{ skill.get_job_url }}" target="_blank">{{ skill.name }}</a>{% if forloop.last %}{% else %},&nbsp;{% endif %}
+                      {% endfor %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Location(s) <span class="pull-right">:</span></div>
+                    <div class="detail_content">
+                      {% if job_alert.location.all %}
+                      {% for location in job_alert.location.all %}
+                      <a href="{{ location.get_job_url }}" target="_blank">{{ location.name }}</a>
+                      {% if forloop.last %}{% else %}, {% endif %}
+                      {% endfor %}
+                      {% else %}
+                      Not Specified
+                      {% endif %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Salary <span class="pull-right">:</span></div>
+                    <div class="detail_content">
+                      {% if job_alert.min_salary and job_alert.max_salary %}<i class="fa fa-inr" aria-hidden="true"></i> {{ job_alert.min_salary }} - {{ job_alert.max_salary }}
+                      {% elif job_alert.min_salary %}
+                      <i class="fa fa-inr" aria-hidden="true"></i> {{ job_alert.min_salary  }} 
+                      {% elif job_alert.max_salary%}
+                      <i class="fa fa-inr" aria-hidden="true"></i> {{ job_alert.max_salary  }}
+                      {% else %}
+                      Not Specified
+                     {% endif %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Experience <span class="pull-right">:</span></div>
+                    <div class="detail_content">{% if job_alert.min_year and job_alert.max_year %}
+                    {{ job_alert.min_year }} - {{ job_alert.max_year }} Year(s)
+                    {% elif job_alert.min_year %}
+                    {{ job_alert.min_year }} Year(s)
+                    {% elif job_alert.max_year %}
+                    {{ job_alert.max_year }} Year(s)
+                    {% else %}
+                    Not Specified
+                    {% endif %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Job Role <span class="pull-right">:</span></div>
+                    <div class="detail_content">{% if job_alert.role %}{{ job_alert.role }}{% else %}Not Specified
+                      {% endif %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                  <div class="detail">
+                    <div class="detail_title">Industry(s) <span class="pull-right">:</span></div>
+                    <div class="detail_content">{% if job_alert.industry.all %}{% for industry in job_alert.industry.all %}
+                      <a href="{{ industry.get_job_url }}" target="_blank">{{ industry.name }}</a>
+                      {% if forloop.last %}{% else %}, {% endif %}{% endfor %}{% else %}Not Specified{% endif %}
+                    </div>
+                    <br clear="all">
+                  </div>
+                </div>
+              </div>
+              <!-- job_alert_result_container ends here --> 
+
+              
+              
+            </div>
+            <!-- job_list_section ends here -->
+          </div>
+        </div>
+        <div class="col-md-8">
+          <section>
+            <div class="container">
+              <h3 class="text-center text-dark">Job Alert Results</h5>
+              <div class="row">
+                {% if jobs_list %}
+                {% for job in jobs_list%}
+                <div class="col-md-8 mx-auto mb-3">
+                  <a href="{% url 'jobapp:single-job' job.id %}">
+                  <div class="card p-1">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <img src="{% static 'images/job_logo_4.jpg' %}" class="img-responsive" alt="Free Website Template by Free-Template.co" />
+                      <div>
+                        <p >{{ job.title }}</p>
+                        <p>published by: {{ job.company_name }}</p>
+                      </div>
+                      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                        <span class="icon-room"></span> {{ job.location }}
+                      </div>
+                      <div>
+                        
+                        
+                      </div>
+          
+                    </div>
+                    
+          
+                  </div>
+                </a>
+                </div>
+                {% endfor %}
+                {% endif %}
+          
+          
+            
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- main_container ends here -->
+</div>
+
+           
+        
+         
+        
+        
+  
+
+{% endblock %}
+{% block pj_info %}
+  <div class="col-md-2 col-sm-8 col-xs-8 about">
+  </div>
+{% endblock %}
+{% block 'extra_js' %}
+<script type="text/javascript">
+  $(".alert-delete").click(function (e) {
+      e.preventDefault();
+      id = $(this).attr('id')
+       $('#block_question').text('Do you want to delete Alert Details?')
+            $('#block_question').dialog({
+                modal: true,
+                draggable: false,
+                title: "Info!!",
+                buttons: [
+                    {
+                        text: "Yes",
+                        click: function () {
+                            $(this).dialog("close");
+                                  $.post('/alert/delete/' + id + '/', $("form#educationform").serialize(), function (data) {
+                                      if (data.error) {
+                                          if (data.response_message) {
+                                              open_dialog(data.response_message, 'Error!')
+                                          }
+                                          else{
+                                              open_dialog('Something went wrong', 'Error!')
+                                            }
+                                      } else {
+                                          open_dialog_with_url('Job Alert Deleted Successfully', 'Success!!!', "/alert/list/")
+                                      }
+                                  }, 'json');
+                                }
+                 },
+                    {
+                        text: "No",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+          })
+  $("select#job_skills").select2({placeholder: "Select here", maximumSelectionSize: 100});
+  $('#job_skills').empty()
+      $('#job_skills').append(new Option('Select a Skill', ''))
+      $.getJSON("{% url 'jobs:get_skills' %}", function (data) {
+          $.each(JSON.parse(data.response), function (key, field) {
+              $('#job_skills').append(new Option(field.fields.name, field.pk))
+          })
+      });
+</script>
+{% endblock %}

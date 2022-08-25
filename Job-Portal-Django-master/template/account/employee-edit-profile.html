@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HOME -->
+<section class="section-hero overlay inner-page bg-image"
+  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-white font-weight-bold">Update Profile</h1>
+        <h4 class="lead text-white font-weight-bold">Welcome Mr.{{request.user.last_name }}! </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="text-center">Personal Information</div>
+          <form method="POST" action="{% url 'jobapp:edit_personalinfo' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="firstname">FirstName</label>
+            <input type="text" name="first_name" id="first_name" value=""  class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="firstname">LastName</label>
+            <input type="text" name="last_name" id="last_name" value=""  class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="firstname">Email</label>
+            <input type="text" name="email" value="{% if request.user.email%} {{request.user.email}}  {% endif %}"  class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="firstname">current city</label>
+            <input type="text" name="current_city"  class="form-control"/>
+            </div>
+            
+            <div class="form-group">
+              <label for="firstname">mobile</label>
+            <input type="text" name="mobile" id="mobile" class="form-control" />
+            </div>
+            <div class="form-group">
+              <input type="submit" value="update" class="form-control" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card p-3">
+          <div class="text-center">Professional Information Information</div>
+          <form method="POST" action="{% url 'jobapp:edit_personalinfo' %}" >
+            {% csrf_token %}
+            <div class="form-group">
+             <label for="profile_description">education</label>
+            <textarea name="profile_description"  class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="firstname">Skills</label>
+            <select class="form-control" name="skill" id="skill" multiple="multiple">
+              {% for skill in skills %}
+              <option value="{{skill.id}}" >{{skill.name}}</option>
+              {% endfor %}
+            </select>
+            </div>
+            <div class="form-group">
+              <label for="firstname">Firstname</label>
+            <input type="text" value="" name="first_name" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="firstname">email</label>
+            <input type="text" value="" name="last_name" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn-warning">submit</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-4 my-2">
+  
+  <div class="container ">
+    <div class="text-center">
+      <p class="lead">Upload resume here</p>
+    </div>
+    <div class="row">
+      <div class=" card col-md-12 p-2">
+        {% if error %} {{error}} {%endif%}
+      <form enctype="multipart/form-data"  method="POST" action = "{% url 'jobapp:upload_resume'%}">
+          {% csrf_token %}
+          <input type="file" name="resume" class="form-control bg-warning" />
+          <button type="submit" class="form-control btn-outline-success">upload resume</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 ">
+        <div class=" py-2 my-3">
+          <p>Your profile is <span class="text-danger">{{request.user.profile_completion_percentage}}%</span> complete</p>
+        </div>
+          
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-center lead">Profile Summary</h5>
+        <div class="card p-2">
+        <p class="lead">FirstName : {{request.user.first_name}}</p>
+        <p class="lead">LastName : {{request.user.last_name}}</p>
+        <p class="lead">Email : {{request.user.email}}</p>
+        <p class="lead">Mobile : {% if request.user.mobile %}  {{request.user.mobile}} {% else %} N/A {%endif%}</p>
+        
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+</section>
+
+{% endblock %}

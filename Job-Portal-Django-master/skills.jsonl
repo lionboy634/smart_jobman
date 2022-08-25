@@ -1,0 +1,49 @@
+{"label" : "SKILL", "pattern" : [{"TEXT": ".NET"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "c++"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "c#"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "php"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "javascript"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "python"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "node.js"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "reactjs"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "vuejs"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "accounting"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "auditing"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "go"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "erlang"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "elixir"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "java"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "html"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "HTML"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "CSS"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "css"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "marketing"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "advertising"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "entrepreneur"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "devops"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "machine"}, {"LOWER": "learning"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "artificial"}, {"LOWER": "intelligence"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "frontend"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "backend"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "php"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "c++"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "c#"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "python"}, {"LOWER": "developer"}]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,413 @@
+,id,user_id,title,description,location,job_type,category_id,salary,company_name,company_description,url,last_date,is_published,is_closed,timestamp
+0,1,5,software,"<p>The Candidate must have skill in web development, system analysis. The candidate must be well versed in C++, DJANGO, JAVA. The candidate must have some knowledge in frontend frameworks in react, vue.js,.</p>",Madina,2,2,,Korle Bu hospital,<p>Korle Bu is one of the oldest public health sectors in Ghana with the finest doctors . We have been in business for a long time and we plan on reinnovating the information system we have here.</p>,https://korlebu.com.gh,2022-07-20,True,False,2022-07-14 07:56:43.492471+00:00
+1,2,6,Backend Developer,"<p><strong>Backend Developer - Python/Django</strong></p>
+
+<p>&nbsp;</p>
+
+<p>We are looking for Python/Django developers with 2-4 + years of experience to be part of our growing team. The role is of Python/Django Backend Web Developer who can handle the challenging work of Web applications development using Python / Django framework.</p>
+
+<p><strong>Required Skills:</strong></p>
+
+<ul>
+	<li>Strong working knowledge of constructs of HTTP, RESTful APIs and WebSockets.</li>
+</ul>
+
+<ul>
+	<li>Build and maintain highly scalable Python processes for the purpose of data collection, manipulation, data pruning, trending and analytics, etc.</li>
+</ul>
+
+<ul>
+	<li>Strong understanding of Python and good knowledge of various Python Libraries (NumPy, Pandas, ORM libraries etc.), API&#39;s and toolkits</li>
+</ul>
+
+<ul>
+	<li>Able to integrate multiple data sources and databases into one system</li>
+</ul>
+
+<ul>
+	<li>Working knowledge of web templating engine for python such as Jinja2 etc</li>
+</ul>
+
+<ul>
+	<li>Ability to integrate user-facing elements developed by front-end developers with server-side logic.</li>
+</ul>
+
+<ul>
+	<li>Ability to integrate data storage solutions and caches.</li>
+</ul>
+
+<ul>
+	<li>Understanding of the threading limitations of Python, and multi-process architecture</li>
+</ul>
+
+<ul>
+	<li>Understanding of fundamental design principles behind a scalable application</li>
+</ul>
+
+<ul>
+	<li>Good understanding of event-driven programming in Python</li>
+</ul>
+
+<ul>
+	<li>Good knowledge of PostGRESQL</li>
+</ul>
+
+<ul>
+	<li>Able to create database schemas that represent and support business processes</li>
+</ul>
+
+<ul>
+	<li>Strong Analytical, Problem Solving &amp; Innovative Skills.</li>
+</ul>
+
+<ul>
+	<li>Working knowledge of version control tools (GIT/SVN).</li>
+</ul>
+
+<ul>
+	<li>Experience/knowledge of working on the LINUX environment.</li>
+</ul>
+
+<ul>
+	<li>Attention to detail, problem-solver with strong analytical skill, good sense of urgency</li>
+</ul>
+
+<ul>
+	<li>Ability to carry out tasks without supervision and able to meet tight deadlines</li>
+</ul>
+
+<ul>
+	<li>Good Writing &amp; Communication Skills. The candidate should be able to communicate with potential Clients and gather inputs/change requests.</li>
+</ul>
+
+<ul>
+	<li>Work with a performance oriented team driven by ownership and open to experiments</li>
+</ul>
+
+<ul>
+	<li>Strong interpersonal skills with excellent written and verbal communication</li>
+</ul>
+
+<p><strong>Responsibilities:</strong></p>
+
+<ul>
+	<li>Develop back-end components to improve responsiveness and overall performance</li>
+</ul>
+
+<ul>
+	<li>Designing and implementing system architecture to handle scale</li>
+</ul>
+
+<ul>
+	<li>Coordinate with Frontend Dev team &amp; Creating APIs (w/ DjangoRestFramework)</li>
+</ul>
+
+<ul>
+	<li>Integrating of web pages with Backend using templating engines for Python</li>
+</ul>
+
+<ul>
+	<li>Build bulletproof API integrations with third party APIs for various use cases</li>
+</ul>
+
+<p><strong>Good to have (Additional Skills):</strong></p>
+
+<ul>
+	<li>Relevant full stack experience.</li>
+</ul>
+
+<ul>
+	<li>You&#39;ve worked with core AWS services in the past and have experience with EC2, ELB, AutoScaling, CloudFront, S3</li>
+</ul>
+
+<ul>
+	<li>Demonstrable work/project portfolio online.</li>
+</ul>
+
+<ul>
+	<li>Working knowledge of front end technologies like Javascript, JQuery, HTML, and CSS</li>
+</ul>
+
+<ul>
+	<li>A good sense of design and aesthetics.</li>
+</ul>
+
+<ul>
+	<li>Experience/Zeal to work in a fast-paced startup environment.</li>
+</ul>
+
+<ul>
+	<li>Candidates who can join immediately will be preferredDevelop very high sense of ownership, the zeal to build scalable applications</li>
+</ul>
+
+<p>Job Type: Full-time</p>
+
+<p>Salary: ₹35,000.00 - ₹55,000.00 per month</p>
+
+<p>Experience:</p>
+
+<ul>
+	<li>Django Development: 1 year (Preferred)</li>
+	<li>total work: 2 years (Preferred)</li>
+</ul>
+
+<p>Education:</p>
+
+<ul>
+	<li>Bachelor&#39;s (Preferred)</li>
+</ul>
+
+<p>Work Remotely:</p>
+
+<ul>
+	<li>Temporarily due to COVID-19</li>
+</ul>
+
+<p>&nbsp;</p>",Takoradi,1,3,$4500,Zanku ventures,"<p>Zanku ventures is the best when it comes to humanitarian aid and we always aim for the best. Our employers are trained really well, hence we always make it to the top as you know it is what makes our business succeed.</p>",https://zanku.com,2022-08-06,True,False,2022-08-10 13:17:59.890588+00:00
+2,3,6,software engineer,"<p>Director of Engineering, Google CloudDirector of Engineering, Google Cloud</p>
+
+<p>Minimum qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Bachelor&#39;s degree in Computer Science or equivalent practical experience.</p>
+
+<p>10 years of experience in networking, distributed systems, and programming languages.</p>
+
+<p>10 years of experience managing diverse engineering teams.</p>
+
+<p>Preferred qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Advanced business or technical degree.</p>
+
+<p>Measurable track record in creating, executing and delivering a technical vision.</p>
+
+<p>In-depth experience operating within and leading cross-functional teams.</p>
+
+<p>Effective product sensibility, with capability to advocate and drive key product innovations or opportunities with the developer community.</p>
+
+<p>Excellent written and verbal communication skills in English with the ability to represent and advocate complex technical concepts.</p>
+
+<p>Demonstrated passion for and thought leadership within networking, programming languages and distributed systems.</p>
+
+<p>About the job</p>
+
+<p>As the Director of Engineering, you will bring your technical and engineering management skills to ensure evolution and success of communication frameworks, including next-generation imperative programming development environments and transformative high-performance RPC systems.</p>
+
+<p>&nbsp;</p>
+
+<p>You will manage and grow a team of engineering managers and technical leads, while also managing and driving the vision and strategy for these frameworks. You will partner with technical leaders in your team and in customer teams, such as Search, Ads and Youtube, and drive adoption of new communications frameworks across Google.</p>
+
+<p>&nbsp;</p>
+
+<p>Google Cloud provides organizations with leading infrastructure, platform capabilities and industry solutions. We deliver enterprise-grade cloud solutions that leverage Google&rsquo;s cutting-edge technology to help companies operate more efficiently and adapt to changing needs, giving customers a foundation for the future. Customers in more than 150 countries turn to Google Cloud as their trusted partner to solve their most critical business problems.</p>
+
+<p>&nbsp;</p>
+
+<p>Responsibilities</p>
+
+<p>Serve as one of the primary points of contact for key customers at Google, defining product and adoption strategies and executing plans.</p>
+
+<p>Collaborate with developers across Google to drive developer productivity and efficiency of communication stacks.</p>
+
+<p>Track, understand, and interpret key usage and efficiency metrics to understand the current state and to ultimately make impactful data-driven technical and business decisions.</p>
+
+<p>Manage, lead, and grow a team of technical leaders and engineering managers to achieve goals. Work with cross-functional teams to improve developer productivity and efficiency of communications stack.</p>
+
+<p>Create, communicate and advocate a strategy for bringing Google&rsquo;s innovations to Google Cloud and the rest of the industry.</p>",accra,1,2,GHS 7000,zanku ventures,<p>We are an engineering firm. We build civil engineering building materials</p>,https://zanku.com,2022-08-06,True,False,2022-07-26 23:24:22.460685+00:00
+3,4,6,accounting auditor,<p>fasjhasfjkasjkjk</p>,madina,3,1,,zanku,<p>business is in our blood</p>,https://google.com,2022-07-24,True,False,2022-07-26 19:42:27.824209+00:00
+4,5,6,IT Project Manager,"<p>Roles and Responsibilities</p>
+
+<ul>
+	<li>Accomplishes information technology staff results by communicating job expectations; planning, monitoring, and appraising job results; coaching, counseling, and disciplining employees; initiating, coordinating, and enforcing systems, policies, and procedures.</li>
+	<li>Maintains staff by recruiting, selecting, orienting, and training employees; maintaining a safe and secure work environment; developing personal growth opportunities.</li>
+	<li>Maintains organization&#39;s effectiveness and efficiency by defining, delivering, and supporting strategic plans for implementing information technologies.</li>
+	<li>Directs technological research by studying organization goals, strategies, practices, and user projects.</li>
+	<li>Completes projects by coordinating resources and timetables with user departments and data center.</li>
+	<li>Verifies application results by conducting system audits of technologies implemented.</li>
+	<li>Preserves assets by implementing disaster recovery and back-up procedures and information security and control structures.</li>
+	<li>Recommends information technology strategies, policies, and procedures by evaluating organization outcomes; identifying problems; evaluating trends; anticipating requirements.</li>
+	<li>Accomplishes financial objectives by forecasting requirements; preparing an annual budget; scheduling expenditures; analyzing variances; initiating corrective action.</li>
+	<li>Maintains quality service by establishing and enforcing organization standards.</li>
+	<li>Maintains professional and technical knowledge by attending educational workshops; reviewing professional publications; establishing personal networks; benchmarking state-of-the-art practices; participating in professional societies.</li>
+	<li>Contributes to team effort by accomplishing related results as needed.</li>
+</ul>
+
+<p>Desired Candidate Profile</p>
+
+<p><strong>Qualification:</strong></p>
+
+<p>B.e/B.tech/MCA/Msc/M.e-IT/Computer science</p>
+
+<p><strong>Experience</strong>: Minimum 1 year as project manager</p>
+
+<p>&nbsp;</p>",dansoman,1,2,,zanku ventures,<p>The best Banking enterprise in the world</p>,https://zanku.com,2022-07-19,True,False,2022-08-10 13:22:45.790222+00:00
+5,6,2,Enterprise AI Expert,"<p>Must be skilled in all aspect of AI from machine learning, expert systems, natural language processing, robotics. Must have a degree in computer science or computer engineering, software development, robotics engineering or any engineering programme. Must have an experience of 7 - 8 years. Must have project projects that solve problems in teh society. Must be confident, skilled, intelligent , smart and have some entrepreneurial skills that is needed to boost teh compnay status as the best AI firm.</p>",Kasoa,1,3,3000,Nestle Ghana,<p>The best business in teh world</p>,https://nestle.com.gh,2022-07-03,True,False,2022-07-16 10:59:34.291689+00:00
+6,7,5,Land economist,"<p>lan afjkasdfjkldfasjkl sdfjklasdfl &nbsp;&nbsp;&nbsp; fadjklasdfjkljkl &nbsp;&nbsp;&nbsp; sdf hiqfodivbhioh fsd asdih soa hgsdh&nbsp; fsdh</p>
+
+<p>afdi hdfio&nbsp; sdiof&nbsp; sdoi hfioay asuhdf oagi oas ogd h</p>",Cantonments,2,1,4000,ghtowns,<p>BEST REAL ESTATE COMPANY</p>,https://ghtowns.com,2022-07-16,True,False,2022-07-16 11:02:56.743717+00:00
+7,8,5,web developer,"<p>We are looking for an outstanding Web Developer to be responsible for the coding, innovative design and layout of client websites. Web developer responsibilities include building our website from concept all the way to completion from the bottom up, fashioning everything from the home page to site layout and function.</p>
+
+<p>Most of the web development work will be via CMS using Drupal &amp; Wordpress<br />
+<strong>Responsibilities</strong></p>
+
+<ul>
+	<li>Write well designed, testable, efficient code by using best software development practices</li>
+	<li>Create website layout/user interface by using standard HTML/CSS practices</li>
+	<li>Integrate data from various back-end services and databases</li>
+	<li>Gather and refine specifications and requirements based on technical needs</li>
+	<li>Create and maintain software documentation</li>
+	<li>Be responsible for maintaining, expanding, and scaling our site</li>
+	<li>Stay plugged into emerging technologies/industry trends and apply them into operations and activities</li>
+	<li>Cooperate with designers to match visual design intent</li>
+</ul>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+	<li>Proven working experience in web programming</li>
+	<li>Top-notch programming skills and in-depth knowledge of modern HTML/CSS, Javascript and PHP</li>
+	<li>A solid understanding of how web applications work including security, session management, and best development practices</li>
+	<li>Adequate knowledge of relational database systems, Object Oriented Programming and web application development</li>
+	<li>Hands-on experience with website performance optimization</li>
+	<li>Knowledge of Search Engine Optimization process</li>
+	<li>Ability to work and thrive in a fast-paced environment, learn rapidly and master diverse web technologies and techniques.</li>
+	<li>BS in computer science or a related field</li>
+</ul>
+
+<p>Application Deadline: 18/9/2020</p>
+
+<p>Job Type: Full-time</p>
+
+<p>Salary: ₹25,000.00 - ₹50,000.00 per month</p>
+
+<p>Experience:</p>
+
+<ul>
+	<li>Web Development: 1 year (Required)</li>
+	<li>total work: 2 years (Required)</li>
+	<li>CSS: 1 year (Required)</li>
+</ul>
+
+<p>Education:</p>
+
+<ul>
+	<li>Bachelor&#39;s (Preferred)</li>
+</ul>
+
+<p>Programming Languages needed:</p>
+
+<ul>
+	<li>HTML (Required)</li>
+	<li>CSS (Required)</li>
+	<li>PHP (Required)</li>
+	<li>JavaScript (Required)</li>
+</ul>",Tema,3,3,Ghs500,ghTowns,<p>The real Estate company in the Ghana. We beautify the streets of Ghana and it is our trademark.</p>,https://ghtowns.com,2022-07-31,True,False,2022-08-10 13:17:47.414476+00:00
+8,9,5,Revenue Reporting Data Analyst,"<p>Revenue Reporting Data Analyst, Business Finance Accounting</p>
+
+<p>&nbsp;</p>
+
+<p>Minimum qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Bachelor&#39;s degree in Accounting, Finance, Business, Engineering or Data Science or equivalent practical experience.</p>
+
+<p>4 years of relevant work experience.</p>
+
+<p>Database experience including SQL coding across standard commercial databases or equivalent in other programming languages.</p>
+
+<p>Experience with standard finance systems (e.g. Oracle, Hyperion, OBIEE, SAP) and core finance processes.</p>
+
+<p>Preferred qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Experience driving operational process improvement.</p>
+
+<p>Experience developing and analyzing large, complex data sets and converting them into information/insights that drive business decisions at all levels of the organization.</p>
+
+<p>Ability to multi-task and apply initiative and creativity on challenging projects.</p>
+
+<p>Distinctive problem-solving and analytical skills combined with strong business acumen.</p>
+
+<p>Exemplary customer service and tactful communication skills, both spoken and written.</p>
+
+<p>Exceptional analytical and technical problem solving skills.</p>
+
+<p>About the job</p>
+
+<p>Analysts on the Business Finance and Accounting Systems team collaborate with multiple teams to ensure that we have robust, scalable data and reporting processes to support our business partners to deliver on internal and external data requests.</p>
+
+<p>&nbsp;</p>
+
+<p>As a Revenue Reporting Data Analyst, you will be focused on executing on internal and external data and reporting requests, including implementing opportunities to optimize our reporting data infrastructure. You will work well with other teams, provide outstanding customer service, deliver on deadlines, and produce flawless work. This role will partner with our Accounting Operations, Tax, External Reporting and Legal teams to provide timely data to manage financial risk, educate users on Google&rsquo;s revenue data sets and drive efficiency improvements, ensuring that partners can adhere to regulatory requirements. You will also work closely with these teams to develop scalable data solutions for accounting and reporting processes.</p>
+
+<p>&nbsp;</p>
+
+<p>Responsibilities</p>
+
+<p>Work with cross-functional departments on reporting data and system initiatives.</p>
+
+<p>Utilize SQL coding to provide financial data for internal and external financial reporting.</p>
+
+<p>Critically evaluate data gathered from multiple sources, identify gaps, reconcile conflicts and decompose high-level information into details to drive decision-making.</p>
+
+<p>Partner with internal teams to define and implement data solutions that improve accounting and reporting processes and architect innovative data solutions to automate and scale revenue reporting.</p>
+
+<p>Maintain highest levels of development practices including technical design, solution development, systems configuration, test documentation/execution, issue identification and resolution, and writing clean, modular and self-sustaining</p>",Kumasi,2,1,,ghTowns,<p>The best real Estate business in the world</p>,https://ghtowns.com,2022-08-05,True,False,2022-08-10 13:22:33.693853+00:00
+9,10,6,Director of Engineering,"<p>Director of Engineering, Google CloudDirector of Engineering, Google Cloud</p>
+
+<p>Minimum qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Bachelor&#39;s degree in Computer Science or equivalent practical experience.</p>
+
+<p>10 years of experience in networking, distributed systems, and programming languages.</p>
+
+<p>10 years of experience managing diverse engineering teams.</p>
+
+<p>Preferred qualifications:</p>
+
+<p>&nbsp;</p>
+
+<p>Advanced business or technical degree.</p>
+
+<p>Measurable track record in creating, executing and delivering a technical vision.</p>
+
+<p>In-depth experience operating within and leading cross-functional teams.</p>
+
+<p>Effective product sensibility, with capability to advocate and drive key product innovations or opportunities with the developer community.</p>
+
+<p>Excellent written and verbal communication skills in English with the ability to represent and advocate complex technical concepts.</p>
+
+<p>Demonstrated passion for and thought leadership within networking, programming languages and distributed systems.</p>
+
+<p>About the job</p>
+
+<p>As the Director of Engineering, you will bring your technical and engineering management skills to ensure evolution and success of communication frameworks, including next-generation imperative programming development environments and transformative high-performance RPC systems.</p>
+
+<p>&nbsp;</p>
+
+<p>You will manage and grow a team of engineering managers and technical leads, while also managing and driving the vision and strategy for these frameworks. You will partner with technical leaders in your team and in customer teams, such as Search, Ads and Youtube, and drive adoption of new communications frameworks across Google.</p>
+
+<p>&nbsp;</p>
+
+<p>Google Cloud provides organizations with leading infrastructure, platform capabilities and industry solutions. We deliver enterprise-grade cloud solutions that leverage Google&rsquo;s cutting-edge technology to help companies operate more efficiently and adapt to changing needs, giving customers a foundation for the future. Customers in more than 150 countries turn to Google Cloud as their trusted partner to solve their most critical business problems.</p>
+
+<p>&nbsp;</p>
+
+<p>Responsibilities</p>
+
+<p>Serve as one of the primary points of contact for key customers at Google, defining product and adoption strategies and executing plans.</p>
+
+<p>Collaborate with developers across Google to drive developer productivity and efficiency of communication stacks.</p>
+
+<p>Track, understand, and interpret key usage and efficiency metrics to understand the current state and to ultimately make impactful data-driven technical and business decisions.</p>
+
+<p>Manage, lead, and grow a team of technical leaders and engineering managers to achieve goals. Work with cross-functional teams to improve developer productivity and efficiency of communications stack.</p>
+
+<p>Create, communicate and advocate a strategy for bringing Google&rsquo;s innovations to Google Cloud and the rest of the industry.</p>","Circle, Accra",1,4,Ghs 4500,Zanku ventures,"<p>Zanku Engineering Department is the engineering department of Zanku Industries. We employ engineers with creativity, confidence and that has helped our industry to strive</p>",https://zanku.com,2022-08-03,True,False,2022-07-26 23:55:46.260751+00:00

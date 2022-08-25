@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HOME -->
+<section class="section-hero overlay inner-page bg-image"
+  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-white font-weight-bold">LATEST TECHNOLOGICAL NEWS</h1>
+        <div class="mt-3">
+          <h3 class="text-white font-weight-bold'">{{ news.title }}</h3>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h3 class="text-underline"> {{ news.title}}</h3>
+        </div>
+        
+        <p class="lead">{{news.description}}</p>
+        <p class="lead">{{news.content}}</p>
+        <p class="lead">Article By {{news.author}}</p>
+        <p class="lead">Published  {{news.timestamp}}</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
