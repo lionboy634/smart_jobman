@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- HOME -->
+
+
+<section class=" bg-dark overlay inner-page bg-image p-2" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="text-white font-weight-bold">Companies</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+          <span class="text-white"><strong>Companies</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ajax_listing_paginattion" class="site-section services-section bg-light block__62849" id="next-section">
+  <div class="container">
+
+    <div class="row">
+      {% for company in companies %}
+      <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
+        <a href="{% url 'jobapp:review' company.id %}" class="block__16443 min-h text-center d-block">
+          <span class="custom-icon mx-auto"><span class="icon-magnet d-block"></span></span>
+          <h3>{{ company.first_name }}</h3>
+          <ul class="job-listing-meta list-unstyled pl-3 mb-0">
+            <li class="menu-fix mb-2">
+             
+              <span class="badge badge-info">
+                review <i class="bi bi-star"></i>
+              </span>
+              </li>
+            <li class="badge badge-secondary menu-fix mb-2"> {{ company.last_name }}</li>
+          </ul>
+          <p>ratings <span></span> </p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    {% include 'jobapp/paginator.html' %}
+
+  </div>
+</section>
+
+
+{% endblock content %}

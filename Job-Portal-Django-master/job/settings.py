@@ -29,15 +29,17 @@ CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 CELERY_RESULT_BACKEND = 'django-db'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'stmp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'rexilinbrown1@gmail.com'
-EMAIL_HOST_PASSWORD = '1.2.3.4.5.asiedu'
-DEFAULT_FROM_EMAIL = 'kofiamaasem@gmail.com'
+EMAIL_PORT = 586
+EMAIL_HOST_USER = "opokukelvin29@gmail.com"
+EMAIL_HOST_PASSWORD = "omhtzjofnxivhovz"
 
 
+
+API_KEY = "Rl30yH3hRm-PhvIrVnto4A"
+API_SEC = "stchI5IbabwqK0zGE4OLxabCCrJLAzA02Sif"
 
 # Application definition
 

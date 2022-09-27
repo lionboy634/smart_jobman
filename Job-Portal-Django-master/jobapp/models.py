@@ -1,3 +1,4 @@
+from ipaddress import ip_address
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -20,6 +21,7 @@ JOB_TYPE = (
     ('1', "Full time"),
     ('2', "Part time"),
     ('3', "Internship"),
+    ('4', "Remote")
 )
 
 class Category(models.Model):
@@ -181,3 +183,12 @@ class DailySearchLog(models.Model):
     skills = models.ForeignKey(Skill, on_delete=models.CASCADE)
     created_on = models.DateField()
     no_of_searches = models.IntegerField(default="0")
+
+
+class SearchResult(models.Model):
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+    skill = models.CharField(max_length=500, null=True, blank=True)
+    location = models.CharField(max_length=500, null=True, blank=True)
+    job_type = models.CharField(choices=JOB_TYPE,max_length=30, null=True, blank=True)
+    searched_on = models.DateTimeField(auto_now=True)
+    ip_address = models.CharField(max_length=100, blank=True, null=True)

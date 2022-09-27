@@ -3,23 +3,16 @@
 {% load get_total_applicant %}
 {% block content %}
 
-<section class="section-hero overlay inner-page bg-image"
-    style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+<section class=" p-2 bg-light overlay inner-page bg-image" id="home-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h1 class="text-white font-weight-bold">Dashboard</h1>
-                <div class="custom-breadcrumbs">
-                    <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
-                    <a href="{% url 'jobapp:job-list' %}">Job</a> <span class="mx-2 slash">/</span>
-                    <span class="text-white"><strong>Dashboard</strong></span>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-success font-weight-bold" style="font-family: 'Handlee', cursive;" >DASHBOARD</h1>
         </div>
+      </div>
     </div>
-</section>
-
-<section class="site-section">
+  </section>
+<section class="p-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mb-5">
@@ -27,7 +20,7 @@
 
                 <div class="card">
                     {% if user.role == "employer" %}
-                    <h5 class="card-header text-center">My All Job</h5>
+                    <h5 class="card-header text-center">JOBS POSTED</h5>
                     {% if jobs %}
                     <table class="table text-center mt-5">
                         <thead class="thead-dark">
@@ -92,7 +85,7 @@
                                     {% if job.is_published == True %}
                                         {% if job.is_closed == False %}
                                         <span id="change_job_status_{{ job.id }}">
-                                            <button onclick="call_sw_alert_func('{% url 'jobapp:complete' job.id %}','{{ job.id }}', 'Once Clicked, Your Post Will Marked Completed')" class="text-white btn btn-success btn-sm" >Make Close</button>
+                                            <button onclick="call_sw_alert_func('{% url 'jobapp:complete' job.id %}','{{ job.id }}', 'Once Clicked, Your Post Will Marked Completed')" class="text-white btn btn-success btn-sm" >close vacancy</button>
                                         </span>
                                         {% else %}
                                         <a class="text-white btn btn-success btn-sm" 

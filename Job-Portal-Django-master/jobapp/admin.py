@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, News, Applicant, Job, BookmarkJob, JobAlert, Skill, Subscriber, DailySearchLog
+from .models import Category, News, Applicant, Job, BookmarkJob, JobAlert, Skill, Subscriber, DailySearchLog, SearchResult
 
 
 admin.site.register(Category)
@@ -8,6 +8,7 @@ admin.site.register(Skill)
 admin.site.register(JobAlert)
 admin.site.register(Subscriber)
 admin.site.register(DailySearchLog)
+admin.site.register(SearchResult)
 
 class ApplicantAdmin(admin.ModelAdmin):
     list_display = ('job','user','timestamp')

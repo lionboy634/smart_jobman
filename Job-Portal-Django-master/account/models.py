@@ -63,6 +63,12 @@ class User(AbstractUser):
 
 
     @property
+    def initials(self):
+        first_name = self.first_name
+        last_name = self.last_name
+        return first_name[0] + last_name[0]
+
+    @property
     def profile_completion_percentage(self):
         percent = 0
         if self.email:
@@ -90,7 +96,7 @@ class User(AbstractUser):
 
     @property
     def recommended_jobs(self):
-        final_jobs = pd.read_csv("final_jobs.csv")
+        final_jobs = pd.read_csv("final_job.csv")
         if self.resume_title is not None and self.resume_text is not None:
             resume_data = str(self.resume_text)
             resume_data = " ".join(Cleaner(resume_data)[2])

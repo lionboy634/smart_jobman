@@ -1,9 +1,15 @@
 import os
+import re
 import json
+import datetime
+from datetime import timedelta
 import requests
 from django.shortcuts import render
-from jobapp.models import Job
-from django.core.mail import EmailMessage
+from jobapp.models import Job, JobAlert
+from django.contrib.auth import get_user_model
+from django.core.mail import send_mail
+from django.template import Template, Context, loader
+from django.conf import settings
 from job.celery import app
 from django.conf import settings
 import pandas as pd
@@ -18,9 +24,11 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 @shared_task(bind=True)
 def test_func(self):
+    value = []
     for i in range(10):
         print(i)
-    return "done"
+        value.append(i)
+    return value
 
 
 
@@ -49,7 +57,7 @@ def extract_news_data():
 def send_email(mto, msubject, mbody):
     if type(mto) != "list":
         mto = [mto]
-    mail  = EmailMessage(msubject, mbody, 'django.conf.settings.DEFAULT_FROM_EMAIL', mto)
+    mail  = send_mail(msubject, mbody, settings.EMAIL_HOST_USER , mto)
     mail.content_subtype = 'html'
     mail.send()
 
@@ -111,4 +119,26 @@ def edit_job_dataset():
 
 @app.task
 def alert_to_users():
-    pass
+    from_date = datetime.now() - timedelta(days=1)
+    to_date = datetime.now()
+    job_post = Job.objects.filter(
+        timestamp__range = (from_date, to_date), is_published=True
+    )
+    user = get_user_model()
+    users = user.objects.all()
+    for job_user in users:
+        skills = job_user.skills
+        user_skills = []
+        if skills is not None:
+            for skill in skills:
+                skill = re.sub(r'[^w/s/]', " ", skill)
+                user_skills.append(skill)
+        job = job_post.filter(tag__name__in=user_skills)
+        t = loader.get_template("jobapp/job_alert_results.html")
+        c = { "jobposts" : job.distinct()[:10], "user" : job_user }
+        subject = "JOB ALERT FOR TOP MATCHING JOBS"
+        rendered = t.render(c)
+        mto = [job_user.email]
+        send_email.delay(mto, subject, rendered)
+
+            

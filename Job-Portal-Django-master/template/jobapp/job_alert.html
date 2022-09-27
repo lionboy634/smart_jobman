@@ -3,18 +3,11 @@
 {% block content %}
 
 <!-- HOME -->
-<section class="section-hero overlay inner-page bg-image"
-  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+<section class=" p-2 bg-light overlay inner-page bg-image" id="home-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-white font-weight-bold">Update Profile</h1>
-        <div class="custom-breadcrumbs">
-          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
-          <a href="{% url 'jobapp:home' %}">upload resume</a> <span class="mx-2 slash">/</span>
-          <a href="{% url 'jobapp:home' %}">update personal info</a> <span class="mx-2 slash">/</span> 
-          <a href="{% url 'jobapp:home' %}">work experience</a> <span class="mx-2 slash"></span> 
-        </div>
+        <h1 class="text-success font-weight-bold">CREATE JOB ALERT</h1>
       </div>
     </div>
   </div>
@@ -30,12 +23,12 @@
           <div class="col-md-12">
             <div class="job_alert_form">
              <div class="panel panel-default">
-              <div class="panel-heading text-center text-uppercase">Tell us what kind of jobs you want</div>
+              <div class="panel-heading text-center text-uppercase lead text-success ">Tell us what kind of jobs you want</div>
               <div class="panel-body">
                 <form name="jobalertform" id="jobalertform" method="post" class="form-horizontal">
                   {% csrf_token %}
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Name your Job Alert<span class="important">*</span></label>
+                    <label for="inputEmail3" class="col-sm-3 control-label text-success ">Name your Job Alert<span class="important">*</span></label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" placeholder="Enter a name that will help you recognize this Job Alert" name="name" id="name">
                     </div>
@@ -43,7 +36,7 @@
 
                   {% if not request.user.is_authenticated %}
                    <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Email Address  <span class="important">*</span></label>
+                    <label for="inputEmail3" class="col-sm-3 control-label text-success">Email Address  <span class="important">*</span></label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" placeholder="Email Address" name="email" id="email">
                     </div>
@@ -53,10 +46,12 @@
                   {% endif %}
 
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Skills<span class="important">*</span></label>
+                    <label for="inputEmail3" class="col-sm-3 control-label text-success">Skills<span class="important">*</span></label>
                     <div class="col-sm-9">
-                      <select class="location form-control skills" multiple="multiple" name="skill" id="skill">
-                        <option value="">Enter the skill</option>
+                      <!-- select class="location form-control skills" data-live-search="true" multiple="multiple" name="skill" id="skill"> -->
+                        <select  name="job_type" class="selectpicker" multiple="multiple" data-style="btn-white btn-md" data-width="100%" data-live-search="true"
+                        title="Select Job Type">
+                        <option value="" class="text-success">Enter the skill</option>
                         {% for skill in skills %}
                         <option value="{{ skill.id }}">{{ skill.name }}</option>
                         {% endfor %}
@@ -67,34 +62,14 @@
                   
                  
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Job Role</label>
+                    <label for="inputEmail3" class="col-sm-3 text-success control-label">Job Role</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" placeholder="Specify the desired role where you want to work" id="role" name="role">
                     </div>
                   </div>
+                 
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Experience</label>
-                    <div class="col-md-9 mar_lr_0">
-                        <div id="div-min_year" class="col-md-6 mb-3">
-                          <select class="form-control experience" name="min_year" id="min_year" style="width:98%">
-                            <option value="">Min Year</option>
-                            {% for year in years %}
-                            <option value="{{ year.0 }}" id="{{ forloop.counter }}">{{ year.1}}</option>
-                            {% endfor %}
-                          </select>
-                        </div>
-                        <div id="div-min_month" class="col-md-6 pad_lr_0">
-                          <select class="form-control experience" name="max_year" id="max_year">
-                            <option value="">Max year</option>
-                            {% for year in years %}
-                            <option value="{{ year.0 }}" class="max_experience" id="{{ forloop.counter }}">{{ year.1}}</option>
-                            {% endfor %}
-                          </select>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Salary</label>
+                    <label for="inputEmail3" class="col-sm-3 text-success control-label">Salary</label>
                     <div class="col-sm-9  mar_lr_0">
                     <div class="col-sm-6 mb-2" id='min_salary'>
                       <input type="text" class="form-control" placeholder="Minimum Salary" name="min_salary" style="width:98%"></div>
@@ -122,10 +97,10 @@
       <div class="similar_job_posts" style="margin-bottom:10px;">
         <div>
           <h3>JOB ALERTS CREATED</h3>
+          {% if alerts %}
           {% for alert in alerts %}
           <a href="{% url 'jobapp:job-alert-result' alert.id %} ">
           <div class="card px-1">
-          <div class="">
             
               
            <p class="lead">Alert name: {{ alert.name }}</p> 
@@ -133,15 +108,16 @@
            
             
           {% endfor %}
+          {% else %}
+          <p class="lead">No job alert created</p>
+          {% endif %}
             </div>
             
           </div>
           </a>
          
         </div>
-        <div class="py-2 my-3">
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpeeljobs%2F&width=300&height=150&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=892560280818752" width="300" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
+        
       
       
     </div>
@@ -183,6 +159,7 @@
               }
           } else {
             window.alert("Alert Created Successfully", 'Success', '/alert/results/' + data.alert_id + '/')
+            window.location = "{% url "jobapp:job-alert" %}";
           }
       }, 'json');
   });

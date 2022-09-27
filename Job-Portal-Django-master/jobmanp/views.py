@@ -125,7 +125,9 @@ def extract_skills(text):
     skills = []
     for ent in doc.ents:
         if ent.label_ == "SKILL":
-            skills.append(ent.text)
+            text = ent.text
+            if text not in skills:
+                skills.append(text)
 
     return skills
 

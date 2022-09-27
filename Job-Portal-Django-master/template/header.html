@@ -4,31 +4,147 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div>
+<!--
 
+<header role="banner">
+     
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">JOBMAN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<div class="site-wrap">
+      <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+        <ul class="navbar-nav mx-auto pl-lg-5 pl-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rooms</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="rooms.php">explore hostel</a>
+              <a class="dropdown-item" href="rooms.php">1 seater room</a>
+              <a class="dropdown-item" href="rooms.php">2 seater room</a>
+              <a class="dropdown-item" href="rooms.php">3 seater room</a>
+            </div>
 
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/location">location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="/booknow/455"><span>Book Now</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="/profile">full profile</a>
+                <a class="dropdown-item" href="/rooms">room_details</a>
+                <a class="dropdown-item" href="change_password.php">change password</a>
+                <a class="dropdown-item" href="/logout"><span class="caret"></span>logout</a>
+                
+            </li>
+        </ul>
+        
       </div>
     </div>
-    <div class="site-mobile-menu-body"></div>
-  </div> <!-- .site-mobile-menu -->
+  </nav>
+</header>
 
+-->
+<nav class="navbar navbar-expand-lg bg-light sticky-top"   style=" box-shadow: 0 2px 6px 0;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-success h1" href="{% url 'jobapp:home' %}" style="font-family: 'Handlee', cursive;">JOBMAN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
 
-  <!-- NAVBAR -->
-  <header class="site-navbar mt-3">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+       
+        {% if user.role == 'employee' or user.is_anonymous %}
+        <li class="nav-item">
+          <a class="nav-link text-success " href="{% url 'jobapp:job-alert' %}">Job Alert</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-success" href="{% url 'jobapp:company-list' %}">Company</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="#">Jobs</a>
+        </li>
+        {% endif %}
+        {% if user.is_authenticated and user.role == 'employer'  %}
+        <li class="nav-item">
+         
+                <a href="{% url 'jobapp:create-job' %}"
+                  class="js-clone-nav pr-3 btn btn-outline-success border-width-2 d-none d-lg-inline-block text-success"><span
+                    class="mr-2 icon-add"></span>Post Job</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="{% url 'jobapp:dashboard' %}">Dashboard</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% if user.is_authenticated %}
+      <div class="d-flex align-items-center justify-content-space-center">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-success" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="{% url 'account:edit-profile' request.user.id %}">profile</a>
+                <a class="dropdown-item" href="{% url 'account:logout' %}"><span class="caret"></span>logout</a>
+                
+            </li>
+        </ul>
+        <div id="avatar" class="text-center mx-2" style=" width: 50px;  height: 50px; border-radius: 50%; background-color:#fff; text-align: center; font-size: 25px;" >
+          <a class="text-success">{{user.initials}}</a>
+        </div>
+      
+        </div>
+        {%else%}
+        <div class="d-flex align-items-center justify-content-space-center">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown mx-3">
+              <button class="btn btn-outline-success dropdown-toggle"  id="dropdown04" data-toggle="dropdown">Register</button>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="{% url 'account:employer-registration' %}">Employer</a>
+                  <a class="dropdown-item" href="{% url 'account:employee-registration' %}">Job Seeker</a>
+                  
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-success " href="{% url 'account:login' %}" >Login</button>
+              </li>
+          </ul>
+          
+        
+          </div>
+        {% endif %}
+    </div>
+  </div>
+</nav>
+
+  <!-- NAVBAR 
+  <section>
+  <nav class="site-navbar mt-3 sticky-top">
     <div class="container-fluid">
       <div class="row align-items-center">
-        <div class="site-logo col-6"><a href="{% url 'jobapp:home' %}">Jobman</a></div>
+        <div class="site-logo col-6"><a href="{% url 'jobapp:home' %}">JOBMAN</a></div>
         <nav class="mx-auto site-navigation">
           <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
             <li><a href="{% url 'jobapp:job-list' %}">Job</a></li>
-            <li><a href="{% url 'jobapp:job-list' %}">Companies</a></li>
+            <li><a href="{% url 'jobapp:company-list' %}">Companies</a></li>
             {% if user.is_authenticated and user.role == "employee" %}
-            <li><a href="#">Reviews</a></li>
             <li><a href="{% url 'jobapp:job-alert' %}">Job alert</a></li>
             {% endif %}
             
@@ -46,21 +162,12 @@
 
                   
                     <li class="pr-3 has-children">
-                      <a>Dashboard</a> 
-                      <ul class="dropdown">
-                        <li><a href="{% url 'jobapp:dashboard' %}">Dashboard</a></li>
-                        <li><a href="{% url 'account:logout' %}">Logout</a></li>
-                      </ul>
+                      <a href="{% url 'jobapp:dashboard' %}">Dashboard</a> 
+                        
                     </li>
 
                 {% elif user.is_authenticated %}
 
-                <li class="pr-3 has-children">
-                  <a>Profile</a>
-                  <ul class="dropdown">
-                    <li><a href="{% url 'account:edit-profile' request.user.id %}">Edit Settings</a></li>
-                  </ul>
-                </li>
 
                 <li class="pr-3 has-children">
                   <a>Dashboard</a> 
@@ -69,9 +176,20 @@
                     <li><a href="{% url 'account:logout' %}">Logout</a></li>
                   </ul>
                 </li>
-                <!-- <a href="{% url 'account:logout' %}"
-                class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
-                  class="mr-2 icon-lock_outline"></span>Log Out</a> -->
+                
+                <li class="pr-3 has-children">
+                  <div id="avatar" class="text-center" style=" width: 50px;  height: 50px; border-radius: 50%; background-color:#fff; text-align: center; font-size: 25px;" >
+                    <a>{{user.initials}}</a>
+                  </div>
+                  
+                  <ul class="dropdown">
+                    <li><a href="{% url 'account:edit-profile' request.user.id %}">Profile</a></li>
+                    <li><a href="{% url 'account:logout' %}">Logout</a></li>
+                  </ul>
+                </li>
+              
+                
+              
                 {% else %}
 
                 <li class="pr-3 has-children">
@@ -93,4 +211,6 @@
             class="icon-menu h3 m-0 p-0 mt-2"></span></a>
       </div>
     </div>
-  </header>
+  </nav>
+  </section>
+-->

@@ -25,6 +25,7 @@
           <div class="text-center">Personal Information</div>
           <form method="POST" action="{% url 'jobapp:edit_personalinfo' %}">
             {% csrf_token %}
+            <h4>{{message}}</h4>
             <div class="form-group">
               <label for="firstname">FirstName</label>
             <input type="text" name="first_name" id="first_name" value=""  class="form-control"/>

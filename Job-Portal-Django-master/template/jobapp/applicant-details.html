@@ -26,10 +26,14 @@
             <div class="border p-4 rounded">
               <ul class="list-unstyled block__47528 mb-0">
                 <li><span class="active">Hiring Status</span></li>
-                <li><button type="submit" class=" btn-info rounded-pill ">Approve</button></li>
-                <li><button type="submit" class="btn-info rounded-pill">Schedule zoom meeting</button></li>
-          
+                <form method="post" id="scheduler">
+                  {% csrf_token %}
+                <input type="hidden" name="email" id="email" value="{{applicant.email}}" />
+                <li><button type="submit" id="approve" name="approve" class=" btn-info rounded-pill ">Approve</button></li>
+                <li><button type="submit" id="schedule" name="schedule" class="btn-info rounded-pill">Schedule zoom meeting</button></li>
+                  </form>
               </ul>
+              <span id="message"></span>
             </div>
           </div>
           <div class="col-lg-8">
@@ -43,7 +47,7 @@
                 {% endif %}
             </p>
             
-            <p><h3>Skills :</h3>{{ content.job.title }}</p>
+            <p><h3>Skills :</h3>{{ applicant.skills }}</p>
             <p><h3>Resume Ranking :</h3>{{ content.timestamp }}</p>
             <p><a href="mailto:{{ applicant.email }}" class="btn btn-primary btn-md mt-4">Contact</a></p>
           </div>
@@ -51,6 +55,23 @@
       </div>
     </section>
     
+
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+  $(function(){
+    $("#schedule").click(function(e){
+      e.preventDefault()
+      $.post("/schedule/meeting/", $("form#scheduler").serialize(), function (data) {
+        console.log(data)
+        $("#message").append('<span>' + data.message + '</span>')
+      }, 'json');
+        
+    });
+ });
+</script>
 
 
 {% endblock %}

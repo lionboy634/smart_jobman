@@ -3,6 +3,7 @@ import json
 import requests
 from time import time
 import jwt
+import datetime
 
 import pandas as pd
 import textract as tx
@@ -17,7 +18,9 @@ from django.urls import reverse, reverse_lazy
 from django.http import Http404, HttpResponseRedirect, JsonResponse
 from django.core.serializers import serialize
 from django.utils.crypto import get_random_string
-
+from django.utils import timezone
+from django.conf import settings
+from django.core.mail import send_mail
 
 from account.models import User
 from jobapp.forms import *
@@ -25,7 +28,7 @@ from jobapp.models import *
 from jobapp.permission import *
 from jobmanp.views import *
 from dashboard.tasks import test_func, send_email
-from jobmanp.views import nlp_wrapper, Cleaner
+from jobmanp.views import nlp_wrapper, Cleaner, extract_skills
 
 User = get_user_model()
 
@@ -99,7 +102,8 @@ def home_view(request):
     'news' : news,
     'recommended_jobs' : recommended_jobs()
     }
-    #test_func.delay()
+    value = test_func.delay()
+    print(type(value.get()))
     #send_email.delay()
     return render(request, 'jobapp/index.html', context)
 
@@ -129,8 +133,10 @@ def upload_resume(request):
             filename = "resume/" + request.FILES["resume"].name
             resume_content = tx.process(filename, encoding='ascii')
             resume_content = str(resume_content, 'utf-8')
+            skills = extract_skills(resume_content)
             user = request.user
             user.resume_title = request.FILES["resume"].name
+            user.skills = skills
             user.resume_text = resume_content
             user.save()
             messages.success(request, 'Your Profile Was Successfully Updated!')
@@ -141,15 +147,48 @@ def upload_resume(request):
 
 
 
+def company_view(request):
+    company = User.objects.filter(role="employer")
+    return render(request, 'jobapp/company.html',{
+        "companies" : company
+    }
+    )
+
+
+
+def review(request, id):
+    company = User.objects.get(id=id)
+    print(company)
+    job = Job.objects.filter(user=company)
+    print(job)
+    return render(request, 'jobapp/review.html',{
+        "company" : company
+    })
+
+
+
 def edit_personalinfo(request):
     if request.method == "POST":
         validate_form = PersonalInfoForm(request.POST, instance=request.user)
         if validate_form.is_valid():
-            return JsonResponse({
-                "data" : validate_form
-            })
+            user = validate_form.save(commit=False)
+
+            user.first_name = request.POST.get("first_name")
+            user.last_name = request.POST.get("last_name")
+            user.mobile = (
+                request.POST.get("mobile")
+                if request.POST.get("mobile")
+                else None
+            )
+            if request.POST.get("email"):
+                user.email = request.POST.get("email")
+            if request.POST.get("current_city"):
+                user.current_city = request.POST.get("current_city")
+            user.profile_updated = datetime.datetime.now(timezone.utc)
+            user.save()
+            return render(request,'account/employee-edit-profile.html',{"message" : "updated successfully"})
         else:
-            print("not okay")
+            return render(request,'account/employee-edit-profile.html',{"message" : "couldnt update profile"})
 
 def news_list_view(request, id):
     news = News.objects.get(id=id)
@@ -284,6 +323,23 @@ def search_result_view(request):
 
     }
     return render(request, 'jobapp/result.html', context)
+
+
+def recruit_search_view(request):
+    if request.method == "POST":
+        print(request.POST.get("skill"))
+        if 'skill' in request.POST:
+            skill = request.POST['skill']
+        
+        if 'location' in request.POST:
+            location = request.POST['location']
+        
+        user = User.objects.filter(skills__in=skill)
+        if user:
+            print("userss")
+        else:
+            print("no userrrrss")
+        
 
 
 @login_required(login_url=reverse_lazy('account:login'))
@@ -613,11 +669,12 @@ def job_alert_results(request, alert_id):
 
 def generate_token():
     token = jwt.encode(
-        {"iss" : API_KEY, "exp": time() + 500},
-        API_SEC,
+        {"iss" : settings.API_KEY , "exp": time() + 500},
+        settings.API_SEC ,
+
         algorithm='HS256'
     )
-    return token.decode('utf-8')
+    return token
 
 
 meeting_details = {
@@ -638,5 +695,24 @@ meeting_details = {
 }
 
 def create_meeting(request):
-    headers = {'authorization' : 'Bearer ' + generate_token(), 'content-type' : 'application/json'}
-    r = requests.post(f'https://api.coom/us/v2/users/me/meetings' , headers=headers, data = json.dumps(meeting_details))
+    if request.method == "POST":
+        headers = {'authorization' : 'Bearer ' + generate_token(), 'content-type' : 'application/json'}
+        r = requests.post(f'https://api.zoom.us/v2/users/me/meetings' , headers=headers, data = json.dumps(meeting_details))
+        print("creating zoom meeting ")
+        res = json.loads(r.text)
+        join_url = res['join_url']
+        print(request.user.email)
+        meeting_password = res['password']
+        subject = "INTERVIEW SCHEDULED"
+        message = 'your meeting has been scheduled'
+        email = request.POST.get("email")
+        #email_from = "poseidon.brown@protonmail.com"
+        #recipient_list = ['rexilinbrown1@gmail.com',] 
+        mto = [email]
+        send_email.delay(mto, subject, message)
+        return HttpResponse(
+            json.dumps({
+                "message" : "interview created successfully",
+                "data" : join_url
+            })
+        )
