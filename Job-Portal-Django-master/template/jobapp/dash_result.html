@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- HOME -->
+<section class=" bg-light overlay inner-page bg-image p-2" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class=" font-weight-bold" style="color:teal;  font-family: 'Handlee', cursive;">Search Results</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash text-dark">/</span>
+          <span class="" style=" font-family: 'Handlee', cursive;"><strong>search results</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="p-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card p-2">
+                    <div class="card-header">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Resume</th>
+                                <th scope="col">jobseeker</th>
+                                <th scope="col">resume</th>
+                                
+                                <th scope="col">Email</th>
+                                <th scope="col">Rank Score(/100)</th>
+                              </tr>
+                            </thead>
+                            {%for candidate in candidates %}
+                            <tbody>
+                              <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td><a href="{% get_media_prefix %}{{candidate.20}}" download="{{candidate.20}}">{{candidate.20}}</a></td>
+                                <td>{{candidate.5}} {{candidate.6}}</td>
+                                <td>{{candidate.20}}</td>
+                                
+                                <td><button type="button" class="btn btn-outline-success " data-bs-toggle="modal" data-bs-target="#exampleModal{{candidate.1}}" data-bs-whatever="@mdo" >view profile</button>  </td></td>
+                                <td>{{candidate.26}}%</td>
+                              </tr>
+                            </tbody>
+                            <div class="modal fade" id="exampleModal{{candidate.1}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title text-center" id="exampleModalLabel">{{candidate.5}} {{candidate.6}}'s Profile</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>FullName : {{candidate.5}} {{candidate.6}}</p>
+                                    <p>Email    : {{candidate.10}}</p>
+                                    <p>Skills   :  {{candidate.21}}</p>
+                                    <p>Location :     {% if candidate.17 == 'nan' %} 
+                                          N/A
+                                           {% else %} {{candidate.17}} {% endif %}</p>
+                                    <p>Mobile   : {{candidate.13}}</p>
+                                    <p>Applied Date  : {{candidate.23}}</p>
+                    
+                                  </div>
+                                  <div class="modal-footer">
+                                      <div class="text-center mx-auto">
+                                        <form method="post" action="{% url 'jobapp:meeting'%}" id="scheduler">
+                                          {% csrf_token %}
+                                          <input type="hidden" name="email" value="{{candidate.10}}" />
+                                          <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+                                          <button type="submit" id="schedule" name="schedule" class="text-white btn btn-success btn-sm">Schedule zoom meeting</button>
+                                          
+                                        </form>
+                                    
+                                      </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                                    
+                            {%endfor%}
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+  $(function(){
+    $("#schedule").click(function(e){
+      e.preventDefault()
+      $.post("/schedule/meeting/", $("form#scheduler").serialize(), function (data) {
+        console.log(data)
+        $("#message").append('<span>' + data.message + '</span>')
+      }, 'json');
+        
+    });
+ });
+</script>
+
+    <script src="{% static 'js/sweet-alert.js' %}"></script>
+    <script src="{% static 'js/sweet-alert-ajax.js' %}"></script>
+{% endblock %}
+

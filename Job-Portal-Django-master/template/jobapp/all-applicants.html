@@ -47,10 +47,11 @@
                                         <button type="button" class="btn btn-outline-success " data-bs-toggle="modal" data-bs-target="#exampleModal{{applicant.id}}" data-bs-whatever="@mdo" >view profile</button>  </td>
                                     <td>
                                         {% if applicant.user.resume_text %}
-                                        {{ applicant.resume_ranking }}%  
+                                        {% if applicant.ranking is not None%}
+                                        {{ applicant.ranking }}%  
                                         {% else %}
                                         resume not uploaded
-                                        {% endif %}</td>
+                                        {% endif %} {%endif%}</td>
 
                                 </tr>
 <div class="modal fade" id="exampleModal{{applicant.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -65,11 +66,22 @@
           <p>Email    : {{applicant.user.email}}</p>
           <p>Skills   : {{applicant.user.skills}}</p>
           <p>Applied Date  : {{applicant.timestamp}}</p>
+          <p>Resume uploaded: <a href="{% get_media_prefix %}{{applicant.user.resume_title}}" download="{{applicant.user.resume_title}}">{{applicant.user.resume_title}}</a></p>
+          <form method="POST" >
+            {%csrf_token%}
+            <input type="text" class="form-control" name="message" placeholder="sender applicant message here"/>
         </div>
         <div class="modal-footer">
             <div class="text-center mx-auto">
-           <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Schedule zoom meeting</button>
+               
+          
+           
+            <input type="hidden" value="{{applicant.user.id}}" name="id" />
+            <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+            <button type="submit" name="post_message" class="btn btn-primary">Send Message</button>
+            
+           </form>
+          
             </div>
           
         </div>
@@ -87,12 +99,12 @@
 
 </section>
 <!-- disclaimer -->
-<section class="p-3 bg-danger text-center ">
+<section class="p-3 text-center " style="background-color:ivory;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-center text-white">Disclaimer !</h4>
-                <p class="lead text-white">This resume ranking is based mainly on the resume uploaded by the jobseeker</p>
+                <h4 class="text-center text-danger">Disclaimer !</h4>
+                <p class="lead text-danger">This resume ranking is based mainly on the resume uploaded by the jobseeker</p>
             
             </div>
         </div>

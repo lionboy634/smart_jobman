@@ -11,7 +11,7 @@ app.conf.update(timezone='Africa/Accra')
 app.conf.beat_schedule = {
     "update_job_csv_at_every_10_minutes":{
         "task": "dashboard.tasks.update_job_data",
-        "schedule": crontab(minute="*", day_of_week="mon,tue,wed,thu,fri,sat")
+        "schedule": crontab(hour="18", minute="30", day_of_week="mon,tue,wed,thu,fri,sat")
     },
     "get_resume_datasets_every_week":{
         "task": "dashboard.tasks.get_resume_data",
@@ -23,7 +23,11 @@ app.conf.beat_schedule = {
     },
     "clean_job_dataset":{
         "task" : "dashboard.tasks.clean_job_data",
-        "schedule" : crontab(minute="*", day_of_week="mon,tue")
+        "schedule" : crontab(hour="18", minute="30", day_of_week="mon,tue,wed,thu,fri,sat,sun")
+    },
+    "send_job_alerts": {
+        "task" : "dashboard.tasks.alert_to_users",
+        "schedule" : crontab(hour="18", minute="30" , day_of_week="mon,tue,wed,thu,fri,sat,sun")
     }
 }
 

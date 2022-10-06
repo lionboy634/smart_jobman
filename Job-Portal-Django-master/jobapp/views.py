@@ -14,6 +14,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
+from django.template.loader import get_template, render_to_string
+from django.template import loader
 from django.urls import reverse, reverse_lazy
 from django.http import Http404, HttpResponseRedirect, JsonResponse
 from django.core.serializers import serialize
@@ -27,7 +29,7 @@ from jobapp.forms import *
 from jobapp.models import *
 from jobapp.permission import *
 from jobmanp.views import *
-from dashboard.tasks import test_func, send_email
+from dashboard.tasks import test_func, send_email, finder, recommend_job, save_search_results, alert_to_users
 from jobmanp.views import nlp_wrapper, Cleaner, extract_skills
 
 User = get_user_model()
@@ -35,27 +37,7 @@ User = get_user_model()
 API_KEY = "api_key"
 API_SEC = "api_sc"
 
-def recommended_jobs():
-    final_jobs = pd.read_csv("final_jobs.csv")
-    resume = f"resume/AJAY CHINNI.docx"
-    resume_data = tx.process(resume, encoding='ascii')
-    resume_data = str(resume_data)
-    resume_data = " ".join(Cleaner(resume_data)[2])
-    resume_data = nlp_wrapper(resume_data)
-    
-    score = []
-    for job in final_jobs['pos_desc_loc_jt_cmpname']:
-        job = " ".join(Cleaner(job)[2])
-        job = nlp_wrapper(job)
-        score.append(job.similarity(resume_data))
 
-    final_jobs['score'] = score
-    final_jobs = final_jobs.sort_values(by='score', ascending=False)
-
-    
-    return final_jobs[:6]
-
-    
 
 def home_view(request):
 
@@ -64,7 +46,7 @@ def home_view(request):
     news = News.objects.all()[:6]
     total_candidates = User.objects.filter(role='employee').count()
     total_companies = User.objects.filter(role='employer').count()
-    paginator = Paginator(jobs, 4)
+    paginator = Paginator(jobs, 7)
     page_number = request.GET.get('page',None)
     page_obj = paginator.get_page(page_number)
     if request.method=="POST":
@@ -92,6 +74,10 @@ def home_view(request):
         }    
         return JsonResponse(data)
     
+    #pass recommended jobs to templates if user is authenticated
+    if request.user.is_authenticated:
+        content = finder.delay(request.user.resume_text)
+    
     context = {
 
     'total_candidates': total_candidates,
@@ -100,15 +86,12 @@ def home_view(request):
     'total_completed_jobs':len(published_jobs.filter(is_closed=True)),
     'page_obj': page_obj,
     'news' : news,
-    'recommended_jobs' : recommended_jobs()
+    'recommended_jobs' : content.get() if request.user.is_authenticated else None
     }
-    value = test_func.delay()
-    print(type(value.get()))
-    #send_email.delay()
     return render(request, 'jobapp/index.html', context)
 
 
-
+#function is responsible for handling jobseekers resume
 def upload_resume(request):
     print(request.POST)
     if "resume" in request.FILES:
@@ -116,6 +99,7 @@ def upload_resume(request):
         fo = request.FILES['resume']
         content_type = fo.content_type
         print(content_type)
+        #supported file types (pdf, rtf, docx, ms-word, openxml)
         sup_types = [
             "application/pdf",
             "application/rtf",
@@ -131,14 +115,19 @@ def upload_resume(request):
                         request.FILES["resume"], request.FILES["resume"].name
                     )
             filename = "resume/" + request.FILES["resume"].name
+            #extracts resume content
             resume_content = tx.process(filename, encoding='ascii')
             resume_content = str(resume_content, 'utf-8')
+            #extract skills in the resume content
             skills = extract_skills(resume_content)
             user = request.user
             user.resume_title = request.FILES["resume"].name
             user.skills = skills
             user.resume_text = resume_content
             user.save()
+            applicant = Applicant.objects.filter(user=user)
+            for app in applicant:
+                app.save()
             messages.success(request, 'Your Profile Was Successfully Updated!')
             return render(request,'account/employee-edit-profile.html',{"error" : "uploaded successfully"})
 
@@ -149,6 +138,10 @@ def upload_resume(request):
 
 def company_view(request):
     company = User.objects.filter(role="employer")
+    mto="rexilinbrown1@gmail.com"
+    subject = "help"
+    message = "it is well"
+    send_email.delay(mto, subject, message)
     return render(request, 'jobapp/company.html',{
         "companies" : company
     }
@@ -208,6 +201,7 @@ def job_list_View(request):
     paginator = Paginator(job_list, 12)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+    alert_to_users.delay()
 
     context = {
 
@@ -299,21 +293,10 @@ def search_result_view(request):
         job_type = request.GET['job_type']
         if job_type:
             job_list = job_list.filter(job_type__iexact=job_type)
-
-    # job_title_or_company_name = request.GET.get('text')
-    # location = request.GET.get('location')
-    # job_type = request.GET.get('type')
-
-    #     job_list = Job.objects.all()
-    #     job_list = job_list.filter(
-    #         Q(job_type__iexact=job_type) |
-    #         Q(title__icontains=job_title_or_company_name) |
-    #         Q(location__icontains=location)
-    #     ).distinct()
-
-    # job_list = Job.objects.filter(job_type__iexact=job_type) | Job.objects.filter(
-    #     location__icontains=location) | Job.objects.filter(title__icontains=text) | Job.objects.filter(company_name__icontains=text)
-
+    if request.user.is_authenticated:
+        ip_address = request.META["REMOTE_ADDR"]
+        user = request.user.id
+        save_search_results.delay(user, ip_address, job_title_or_company_name, location, job_type)
     paginator = Paginator(job_list, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -327,19 +310,16 @@ def search_result_view(request):
 
 def recruit_search_view(request):
     if request.method == "POST":
-        print(request.POST.get("skill"))
+        #print(request.POST.get("skill"))
         if 'skill' in request.POST:
-            skill = request.POST['skill']
-        
-        if 'location' in request.POST:
-            location = request.POST['location']
-        
-        user = User.objects.filter(skills__in=skill)
-        if user:
-            print("userss")
-        else:
-            print("no userrrrss")
-        
+            desc = request.POST['skill']
+        #user = User.objects.filter(role="employee")
+        #Returns candidates that match the job description 
+        content = recommend_job.delay(desc)
+        context = {
+            "candidates" : content.get()
+        }
+        return render(request, 'jobapp/dash_result.html', context)
 
 
 @login_required(login_url=reverse_lazy('account:login'))
@@ -426,11 +406,17 @@ def delete_job_view(request, id):
 @user_is_employer
 def make_complete_job_view(request, id):
     job = get_object_or_404(Job, id=id, user=request.user.id)
+    applicants = Applicant.objects.filter(job__id=job.id)
 
     if job:
         try:
             job.is_closed = True
             job.save()
+            for app in applicants:
+                email = app.user.email
+                subject = "JOB POSTING HAS BEEN CLOSED"
+                message = "JOB POSTED HAS BEEN REMOVED"
+                send_email.delay(email, subject, message)
             messages.success(request, 'Your Job was marked closed!')
         except:
             messages.success(request, 'Something went wrong !')
@@ -443,8 +429,23 @@ def make_complete_job_view(request, id):
 @user_is_employer
 def all_applicants_view(request, id):
 
-    all_applicants = Applicant.objects.filter(job=id)
+    all_applicants = Applicant.objects.filter(job=id).order_by('-ranking')
 
+    if request.method == "POST":
+        from_user = request.user
+        message = request.POST.get("message")
+        to_user = request.POST.get("id")
+        msg = UserMessage.objects.create(
+            message = message,
+            message_from = from_user,
+            message_to = User.objects.get(id=int(to_user))
+        )
+        job = Job.objects.get(id=id)
+        if job:
+            msg.job = job
+            msg.save()
+   
+        
     context = {
 
         'all_applicants': all_applicants
@@ -549,18 +550,15 @@ def job_alert(request):
     if request.method == "GET":
         template = "jobapp/job_alert.html"
         if request.user.is_authenticated:
-            alert = JobAlert.objects.filter(email=request.user.email)
+            alerts = JobAlert.objects.filter(email=request.user.email)
         else:
-            alert = []
-        print
+            alerts = []
         return render(
             request,
             template,
             {
                 "skills" : Skill.objects.all(),
-                "alerts" : alert
-                
-
+                "alerts" : alerts
             }
         )
     
@@ -653,6 +651,15 @@ def job_alert_results(request, alert_id):
             "job_alert" : job_alert,
             "jobs_list" : jobs_list
         }
+        subject = "WELCOME TO JOBMAN"
+        if request.user.is_authenticated:
+            mto = request.user.email
+        t = loader.get_template("jobapp/job_alert_result.html")
+        #c = { "jobs_list" : jobs_list}
+        subject = "JOB ALERT FOR TOP MATCHING JOBS"
+        rendered = t.render(data)
+        msg = render_to_string("jobapp/job_alert_result.html")
+        send_email.delay(mto, subject, rendered)
         print(data)
         return render(request, "jobapp/job_alert_result.html", data)
 
@@ -664,7 +671,17 @@ def job_alert_results(request, alert_id):
 
 
     
-    
+def notifications(request):
+    user = request.user
+    messages = UserMessage.objects.filter(message_to = user)
+    count_msg = len(messages)
+    context = {
+        "messages" : messages,
+        "c_msg" : count_msg
+    }
+    print(messages)
+
+    return render(request, "jobapp/notifications.html", context) 
 
 
 def generate_token():
@@ -709,7 +726,16 @@ def create_meeting(request):
         #email_from = "poseidon.brown@protonmail.com"
         #recipient_list = ['rexilinbrown1@gmail.com',] 
         mto = [email]
-        send_email.delay(mto, subject, message)
+        message = "<html> INVITATION TO AN EMAIL </html>"
+        msg = render_to_string("jobapp/welcome.html")
+        t = loader.get_template("jobapp/meeting.html")
+        #c = { "jobs_list" : jobs_list}
+        subject = "SCHEDULED INTERVIEW"
+        data = {
+            "url" : join_url
+        }
+        rendered = t.render(data)
+        send_email.delay(email, subject, rendered)
         return HttpResponse(
             json.dumps({
                 "message" : "interview created successfully",

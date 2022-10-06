@@ -1,0 +1,696 @@
+,id,password,last_login,is_superuser,first_name,last_name,is_staff,is_active,date_joined,email,role,gender,mobile,education,profile_pic,employment_history,current_city,permanent_address,preferred_city,resume_title,skills,resume_text,profile_updated,profile_description,activation_code
+0,1,pbkdf2_sha256$320000$Qhbp2m3DjqFNXs6YR37YCM$rI1Q+fR8isB3y6+dgcr8DVKTxccig5l46c2CRdZ1/Sc=,2022-07-12 20:50:13.615842+00:00,False,Rexford,Asiedu,False,True,2022-07-12 20:49:52.540941+00:00,rexilinbrown1@gmail.com,employee,M,,,,,cantoments,,,,,,2022-07-24 14:55:05.845591+00:00,,
+1,2,pbkdf2_sha256$320000$s9cmLQjI1AHDNjKIGaFZlS$bVNMxtXcXNE1RZHgIodaNCBVX4Ckpfqne38B8kTtsVs=,2022-07-12 20:53:40.168374+00:00,False,Nestle,Madina Osu,False,True,2022-07-12 20:53:26.548884+00:00,nestle@nestle.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+2,3,pbkdf2_sha256$320000$nuubOXwXKf5d1OFwjP8Wqe$6Vp5td6/ZZhu10gaVVXzM8eF0lhCgwOsFgclFKoJQi0=,2022-09-04 23:10:16.081814+00:00,False,collins,Yeboah,False,True,2022-07-12 21:13:14.346588+00:00, collins@gmail.com  ,employee,M,0557458787,,,,madina,,,AJAY CHINNI.docx,,"AJAY CHINNIdocx AJAY CHINNIFeatured Resume   nn nnSeeking roles in Machine Learning Predictive Modeling NLP Data Science 
+Deep Learning Natural Language Processing IoT Artificial Intelligence Image Processing Data Analysis Data Visualization Object Oriented ProgrammingSoftware Engineeringnnnn nn nnCurrent Designation Machine Learning Engineer Current Company PhenompeoplennCurrent Location Hyderabad   SecunderabadnnPref Location Bengaluru   BangaloreDelhi   NCRHyderabadnnFunctional Area IT Software   Application Programming   MaintenancennRole Software Developer Industry ITSoftwareSoftware Services Marital Status Single unmarried Total Experience 3 Years 0 Months Notice Period 2 MonthsnnHighest Degree CS CSnn nnKey Skills Machine LearningPredictive ModelingNLPData Science Deep LearningNatural Language ProcessingIOTArtificial IntelligenceImage ProcessingData AnalysisData VisualizationObject Oriented ProgrammingSoftware EngineeringTensorFlowComputer Visionnn nnVerified    Phone Number    Email   idnn nnID 863c41556ec744d7b178c3c114e76e35Last Active 9Sep20Last Modified 9Sep20nn nnJump to SectionWork Experience   Education   IT Skills nn nn nnSummarynnFullstack Machine Learning Engineer with 3 years accomplishment delivering effective machine learning solutions leveraging predictive modelling NLP and exceptional data science capabilities nnnn nnWork Experiencenn Phenompeople as Machine Learning EngineernnAug 2019 to Till Datenn Achieved a tenfold decrease in website build times by creating ML pipeline to convert images into HTML codes utilising RCNN inception and OCR algorithmsnnnn Reduced server load by 60 and applied LSTM and Facebook Prophet algorithms in creating an optimised scheduler to pull jobsnnnn Deployed machine learning models and implemented extensive UI features like autocorrect and autocomplete to enhance efficiency of HR operations via seq2seq Attention Mechanism and Bert algorithmsnnnn Designed distributed algorithms for identifying trends in unstructured large data using Pysparknn nn Zealeers Technologies as Software Developer Sep 2018 to Jun 2019nn Designed object detection and IoT model to detect fainting as well as machine learning model capable of forecasting stock directions utilising sentiment analysis and time series models Developed and executed test phases for Android applications and Unity games recording bugs and issuing patches to enhance user interface  Web unix as Junior Data Scientist Aug 2017 to May 2018nn Utilised Django in developing web application and RESTful API processing images and recommending relevant apparels via computer vision Applied deep learning and natural language processing 
+in developing prototype chatbot to diagnose patients health conditions and medical statesnn nn Back to Topnn nnEducationnnUG BTechBE Computers from Lovely Professional University LPU in 2017nnPG CS CS from Lovely Professional University LPU in 
+2017nn nn nn Back to Topnn nnIT Skills Skill Name Version Last Used ExperiencennMachine learning Deep learningtttnnpython JAVA sqltttnnDjango Docker Natural Language Processingttt2 YearsnnComputer Visionttt2 YearsnnKerasttt2 Years Tensoflow Years Back to Top Languages Known LanguageProficiencytReadtWritetSpeaknnEnglishtt t t nnHinditt t t nnTelugu",2022-09-04 23:11:50.707555+00:00,,
+3,4,pbkdf2_sha256$320000$wjIKxV4t422MlJlb31GBMZ$rMM4l0O6kjytxbFePskS5ZKJqq9w62mz+kZjMlmIZko=,2022-09-28 23:41:25.264418+00:00,True,,,True,True,2022-07-12 21:32:53.173244+00:00,rex@gmail.com,,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+4,5,pbkdf2_sha256$320000$7AG18ww4lUPS6baJ9bt5ot$e+fDnnOTjYk20P2Mc1HzJj0V1zXfuyiEZy45M5I6+BI=,2022-09-29 00:03:24.390455+00:00,False,GhanaTowns Estate,Osu,False,True,2022-07-12 22:04:15.949224+00:00,ghtowns@gmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+5,6,pbkdf2_sha256$320000$loukCWH45bWcer2B575YSw$WmhF7cd4JE55ooOoJJZnSWRnT4yBsATprDHodzNtYdo=,2022-09-29 09:43:00.743891+00:00,False,Zanku Ventures,"Accra, Osu",False,True,2022-07-13 05:55:16.012414+00:00,zanku@zanku.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+6,7,pbkdf2_sha256$320000$VJSMRTQWS8GFNdkoODAMP9$sgZMod0fuRw+whgTqG8QLODmhTeMF/zk7JfkkhwkSZw=,,False,zanku ventures,"osu, accra",False,True,2022-07-13 05:56:40.067936+00:00,zanku@protonmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+7,8,pbkdf2_sha256$320000$OPhvkzzhpzRNorY4kahzMo$J0WYuqqaoSNeZKT+MIfc57SGvV4JUcsLs8WUGsYaFgQ=,,False,Franko Ventures,"Circle, Accra",False,True,2022-07-16 11:35:54.749754+00:00,online@frankotrading.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+8,9,pbkdf2_sha256$320000$vTr6F0a2TmHVcQHtKvy63y$zqLeMfMzMRpq1uJ4+5qk5ZqzNHZ+ynN73yTrlOEbGn8=,,False,02 Telecommunication Ltd,Bawaleshie,False,True,2022-07-16 11:39:36.570843+00:00,kofiamaasem@gmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+9,10,pbkdf2_sha256$320000$jas6mEMzb4hXrX6uhK599x$BdbT/m3SHBBBtCRnjzSfAqPUPl5g36bzW5ldbYyDLfQ=,,False,Germany,germany,False,True,2022-07-16 11:44:11.759070+00:00,germany@germ.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+10,11,pbkdf2_sha256$320000$bd6RPZ3azdMWkWJhTomvLu$azPFcTE4c5iR+5cAeTjk03/bhRDzyeRC4YnpXBDu80U=,,False,Rexons,East legon,False,True,2022-07-16 11:49:09.467281+00:00,rexons@gmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+11,12,pbkdf2_sha256$320000$r5ZdNEyPQ3qmGFj1Cb8m6i$Uf9QnddiN8OTdTbSdTAx3lQikNRoYH5kbHNcD9+Ah+4=,,False,Saxons,saxons street,False,True,2022-07-16 11:52:56.497370+00:00,online@saxons.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+12,13,pbkdf2_sha256$320000$Lb6KqWmycopmZdqH9RSeZf$RmM8jbpLDUEpFjol1aoNEbhuUDYj+2CH9XMRPwtDTsY=,,False,Ing Software Enterprise,cantoment,False,True,2022-07-16 11:54:56.053118+00:00,ings@gmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+13,14,pbkdf2_sha256$320000$e7zaYLeYFFA0SDKmgRZF1e$ySjt3m6zsT/WTfKDmM4gi4zvV3YLkHOMJWATVeco4nU=,2022-08-23 23:30:07.135004+00:00,False,Kofi Susu Company,"bolgatanga, walewale",False,True,2022-07-16 11:56:55.831117+00:00,kofisusu@gmail.com,employer,N/A,,,,,madina,,,,,,2022-07-24 14:55:05.845591+00:00,,
+14,15,pbkdf2_sha256$320000$Mz1Bg1BglKfBsUM28OfsM2$PArrBBAa1yREs+DxRP3XPxlMJI2+kWlPyW3raPrklkg=,,False,Collins Furniture business,"Ashongman, Accra",False,True,2022-07-16 12:03:25.352171+00:00,collins127@gmail.com,employer,,,,,,,,,,,,2022-07-24 14:55:05.845591+00:00,,
+15,16,pbkdf2_sha256$320000$0tkBBVtao89QZ61qjPjpZr$E90bbtpXMONBfxtVCVxjv8kxpoXbrMZlAO027eTY3iY=,2022-09-29 00:00:45.684465+00:00,False,Kofi,Blackman,False,True,2022-07-20 12:37:31.729604+00:00,emmawax@gmail.com,employee,M,,,,,,,,GurshidPremium.docx,"['HTML', 'Kubernetes']","GurshidPremium CV Featured Resume  
+
+ 
+
+Software Developer seeking roles in Software Engineering. Skilled in Java, Spring Boot, Hibernate, MySql, Postgres, MongoDB, Ruby. Strong engineering professional with a BE focused in Computer Engineering from Netaji Subhas Institute of Technology.
+
+
+
+ 
+
+ 
+
+Current Designation: Software Developer
+
+Current Company: OYO
+
+Current Location: Delhi
+
+Pref. Location: Bengaluru / Bangalore,Hyderabad,Gurgaon
+
+Functional Area: IT Software - Application Programming / Maintenance
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 1 Year(s) 5 Month(s)
+
+Notice Period: 1 Month
+
+Highest Degree: B.Tech/B.E. [Computers]
+
+ 
+
+Key Skills: Software Developer, Software Engineering, Software Development, Java, Hibernate, Postgres, MongoDB, Java Api, REST API, Python, Scala, MySQL, Ruby, HTML, CSS, C, C++, DBMS, Data Structures, Algorithms, OOPS, System Design, Project Management
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: fb57452a2a484fe8aea0312d20dff77aLast Active: Jul-Sep 2020Last Modified: Jul-Sep 2020
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills | Work Authorization
+
+ 
+
+ 
+
+Summary
+
+A result-oriented professional with experience in Software Developer, Software Engineering, Software Development, Java, Hibernate, Postgres, MongoDB, Java Api, REST API, Python, Scala, MySQL, Ruby, HTML, CSS, C, C++, DBMS, Data Structures, Algorithms, OOPS, System Design, Project Management, and Requirement Gathering. 
+
+
+
+ 
+
+Work Experience
+
+ OYO as Software Developer
+
+Jul 2019 to Till Date
+
+o Core team member of OYO's Ordering Team which is responsible for creating and managing various services for orders like bookings, meals, wizard and ancillary orders, etc.
+
+o Worked on migrating Ordering's entire codebase and various API's from Ruby to Java as part of the Ordering Management System. This led to a decrease in P99, P95, and P50 of most of the APIs by more than 70%.
+
+o Design and develop the end-to-end architecture of the meal plan management system for various platforms like an app, website, and other external platforms like Booking.com, Expedia, etc. The product aims at providing meals to costumers which resulted in an increase in revenue by 10%.
+
+o Worked on migrating my team's infrastructure from AWS Elastic Beanstalk to Kubernetes. Since it is an open-source technology, it helped in cutting our team's infra cost by 30%.
+
+o Released various revenue-based projects involving wizard membership program which offers premium
+
+membership privileges to customers.
+
+o Responsible for end-to-end design and development of Scheduler Service as my first project using spring boot and quartz, which schedules and configures cron and simple jobs using a UI. Alerting was also configured within the service.
+
+o Worked on the Global Distribution Platform (GDP), which was a multi-team project used to create bookings on hotels not under the OYO banner.
+
+o Solved various problems like database optimizations, incorporating new features in existing APIs, etc. leading to recognition.
+
+ 
+
+ Walmart as Software Developer Intern
+
+May 2018 to Jul 2018
+
+Worked on Dynamic Store Initiated Markdown (DSIM) product which aims to reduce costs incurred by Walmart through wastage of items in US and UK markets by 20%. By using Spark and Scala, I optimized the data preparation script which reduced the data collection time by 40%.
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Netaji Subhas Institute of Technology (NSIT) in 2019
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+Java, Ruby, C, C++, Python, Scala		2019	1 Year(s)
+
+HTML, CSS, MySQL, Spring boot, Hibernate		2019	1 Year(s)
+
+Hive, Jenkins, Spark		2019	1 Year(s)
+
+Mongo DB, SQL, Redis		2019	1 Year(s)
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English	Expert	
+
+ 
+
+ 
+
+ 
+
+Hindi",2022-07-24 14:55:05.845591+00:00,,
+16,17,pbkdf2_sha256$320000$LKecHXasFW8AZgvMtFilN2$yYLD4qD7MbSjW9EFPuVKHLtPtKSwv5clxEAQ/TrRvIg=,2022-09-28 23:40:47.721415+00:00,False,Brown,Acheampong,False,True,2022-07-21 15:43:41.324411+00:00,brown@gmail.com,employee,N/A,,,,,madina,,,Abhishek Sharma.docx,"['Machine Learning', 'python', 'MACHINE LEARNING']","Abhishek SharmaFeatured Resume  
+
+ 
+
+Developer seeking roles in ETL Development,Machine Learning,Airflow,Google Cloud Platform,Linux,Hadoop,SQL,C,C++,Python
+
+
+
+ 
+
+ 
+
+Current Designation: Data Engineer
+
+Current Company: Datametica Solutions Pvt. Ltd.
+
+Current Location: Pune
+
+Pref. Location: Pune,Noida,Gurgaon
+
+Functional Area: IT Software - DBA / Datawarehousing
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 1 Year(s) 2 Month(s)
+
+Notice Period: 15 Days or less
+
+Highest Degree: B.Tech/B.E. [Computers]
+
+ 
+
+Key Skills: Software Developer,Database Development,ETL Development,Machine Learning,Airflow,Google Cloud Platform,Linux,Hadoop,SQL,C,C++,Python
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: fca9a2e1860d46be83b1732b58f6692fLast Active: 10-Sep-20Last Modified: 10-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Result-oriented Professional with 1.2 year of experience in ETL Development, Machine Learning, Airflow, Google Cloud Platform, Linux, Hadoop, SQL, C, C++, Python. 
+
+
+
+ 
+
+Work Experience
+
+ Datametica Solutions Pvt. Ltd. as Data Engineer
+
+Jul 2019 to Till Date
+
+Development of business logic to ETL pipelines.
+
+Development of utilities in python to automate tasks.
+
+Development in GCP Pub/Sub for the real time ingestion of the data.
+
+Transformation of implemented business logic in Cloud composer.
+
+ 
+
+ GeeksforGeeks.org as Technical Content Writer
+
+Nov 2017 to Dec 2017
+
+Worked as a Technical ContentWriter and got published 35 articles. Most of the articles are on Machine
+
+learning.
+
+Profile link:https://auth.geeksforgeeks.org/user/Abhishek%20Sharma%2044/articles
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Graphic Era University, DEHRADUN in 2019
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+C			
+
+SQL			
+
+Linux			
+
+CPP			
+
+Google Cloud			
+
+Big Query			
+
+MACHINE LEARNING			
+
+CLASSIFICATION			
+
+airflow			
+
+COMPOSER			
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English		 	 	 
+
+Hindi",2022-07-24 14:55:05.845591+00:00,,
+17,18,pbkdf2_sha256$320000$bENjnODr5sj7kBAVR9jdmS$2KJRYxfxg9mbtdMRmA/QdBSU0u3k1sL8RseuUd4A5nQ=,2022-09-28 23:42:30.319417+00:00,False,Ella,Forson,False,True,2022-07-24 17:06:37.818352+00:00,ella@gmail.com,employee,F,,,,,madina,,,Arun Kumar.docx,,"Arun Kumar UFeatured Resume  
+
+ 
+
+HR Manager seeking assignments in HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management
+
+
+
+ 
+
+ 
+
+Current Designation: HR Manager (Payroll & Compliance)
+
+Current Company: Ecare India Pvt Limited
+
+Current Location: Chennai
+
+Pref. Location: Bengaluru / Bangalore,Chennai,Hyderabad
+
+Functional Area: HR / Administration / IR
+
+Role: HR Manager
+
+Industry: BPO/ITES
+
+Marital Status: Single/unmarried
+
+Total Experience: 12 Year(s) 0 Month(s)
+
+Notice Period: 2 Months
+
+Highest Degree: MBA/PGDM [HR/Industrial Relations]
+
+ 
+
+Key Skills: HR Manager,HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management,Industrial Relation
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 4e238c2e470b2ccd32Last Active: 17-Sep-20Last Modified: 17-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Highly Effective Human Resources Manager with over 12+ years of experience specializing in establishing productive business relationships and resolving critical human capital business issues. Demonstrated competencies in carrying out multiple tasks simultaneously, meeting tight deadlines, maintaining strict confidentiality of company records, coordinating with third parties and surpassing performance parameters. Well-equipped in organizing groups, preparing documentations and reporting. Proactive and efficient team player, sports oriented with excellent analytical, problem solving, organization, coordination, time management, communication and interpersonal skills. 
+
+
+
+ 
+
+Work Experience
+
+ Ecare India Pvt Limited as HR Manager (Payroll & Compliance)
+
+May 2017 to Till Date
+
+Responsible for error free, end to end payroll processing and on-time salary disbursement.
+
+Maintaining payroll information by designing systems, calculation, and entering of data.
+
+Updating payroll records by reviewing and approving changes in exemptions, Employee CTC, Insurance/Mediclaim coverage, savings deductions, job titles, and department/ division transfers.
+
+Paying employees by directing the production and issuance of paychecks or electronic transfers to bank accounts and distributing payslips electronically on timely manner.
+
+Preparing reports by compiling summaries of earnings, taxes, deductions, leave wages and registers.
+
+Preparing thorough workings and remitting employee statutory benefits such as Employee State Insurance Corp (ESI), Provident Fund (PF), Gratuity, Labor Welfare Fund (LWF), Professional Tax (P.Tax) and ensuring with Management for payment closure on timely manner.
+
+Handling compliance administration such as PF Transfer requests, PF claim queries, PF KYC updations, ESI Maternity benefit claims, Death claim process from ESI/PF/Gratuity.
+
+Responsible for maintenance of accurate Payroll Inputs such as Personnel Entry, Separations, Bonus payments, Interim Hikes, Incentive payouts, Salary accounts, leave encashment payouts, deductions.
+
+Determining payroll liabilities by approving the calculation of employee state income and social security taxes, employer's social security, and workers compensation payments.
+
+Hosting and completing Bi-annual Appraisal system, complete Budget workings, Salary grid workings
+
+Designation wise average salary analysis), letter generation and giving effect in Payroll with nil error.
+
+Balancing the payroll accounts by resolving payroll discrepancies.
+
+Providing payroll information by resolving queries.
+
+Maintaining payroll guidelines by writing and updating policies and procedures.
+
+Responsible for Attendance administration and monthly Attendance record keeping for all employees.
+
+Complying with state and local legal requirements by studying existing and new legislation; enforcing adherence to requirements; advising management on needed actions.
+
+Maintaining employee confidence and protecting payroll operations by keeping information confidential.
+
+Maintaining professional and technical knowledge by reviewing professional publications; establishing personal networks; participating in professional societies.
+
+Coordinating with vendor for payroll systems.
+
+
+
+HR Manager (Business Partnering)
+
+Second-in-line command for everything related to Human Resource Management of the Organization.
+
+Ensured compliance of Human Resource policy, employee benefits and employment law at all levels.
+
+Managed HR Operations & HR Business Partnering (for both Day & Night business) functions with a team size of 3 & providing adequate mentorship to the Associates consistently.
+
+Provided confidential issue resolution while working with various levels of management.
+
+Advise Managers on Organizational policies and recommend needed changes.
+
+Participating in the Quarterly Management review meetings representing HR Department and working on improvements.
+
+Plan and implement recreational events (monthly fun, yearly cultural & sports events) and budget approvals.
+
+Representing employer in High court, Labor Court, Police Station, Advocates and other Govt bodies as and when required, for handling legal issues.
+
+Being an approved Interview panelist of the Organization, responsible to be a part of IJP and Promotion interviews, analyze and provide recommendations to the Management.
+
+Responsible to conduct orientation to foster positive attitude towards Organizational objectives.
+
+Serve as a link between Management and employees by handling employee issues, incident arise, PIP and serving to resolve work-related problems to foster positive environment.
+
+Responsible for conducting and providing innovative ideas for Rewards & Recognition program on quarterly basis.
+
+ 
+
+ Sundaram Business Services Limited as HR Officer
+
+Dec 2013 to May 2017
+
+Consult with line management and provide daily HR guidance.
+
+Resolve complex employee relations issues and address grievances.
+
+Work closely with management and employees to improve work relationships, build morale and increase productivity and retention.
+
+Organizing and conducting induction for new hires, preserving moral and taking care of their welfare.
+
+Responsible for initiation and completion of Performance Management System (PMS)
+
+Handling ISO, ISMS and other internal and external audits.
+
+Responsible for conducting one to one/group connects to understand employees concerns and to recommend organization on possible implementation of changes/improvements.
+
+Responsibility, with the HR department to ensure that all HR policies and procedures are regularly reviewed and continue to reflect both up-to-date employment law and best practice.
+
+Reviewing staff awards processes (R&R) and to design an effective staff award system which recognizes excellent performance.
+
+Conducting retention discussion for resigned personnel to find possible means to retain them.
+
+Provide HR policy guidance.
+
+Identifying training needs for teams and individuals.
+
+Suggest new HR strategies.
+
+Responsible for specific HR related projects from time to time and as required. Researching, progressing and coordinating the project and make recommendations for future actions.
+
+Organizing fun @ work activities.
+
+
+
+HR Officer (HR Operations)- Sundaram Business Services Limited
+
+Managed HR Operations function with a team size of 4 & providing adequate mentorship consistently.
+
+Responsible for error free payroll processing and on time salary disbursement.
+
+To coordinate with the finance & MIS department for monthly payroll system, make necessary needful for new joiners, separations, unpaid leave, salary advances, etc. Follow-up with Bank for timely credit of salary & Issuing salary slips.
+
+Preparing complete workings and remitting employee statutory benefits such as Employee State Insurance Corp (ESI), Provident Fund (PF), Gratuity, Labor Welfare Fund (LWF), Professional Tax (P.Tax) and ensuring with Management for payment closure on a timely manner.
+
+Research, implement and administer all company benefit plans.
+
+Maintain all organization policies, procedures and provide guidance and Interpretation to staff.
+
+Ensure all data (new staff, transfers, promotions) and employment changes (Salary changes, separations) are maintained for two group entities of Sundaram Finance which carries employee base of 1000+.
+
+Maintain in-depth knowledge of legal requirements related to HR, reducing legal risks and ensuring all statutory compliance & timely remittances to Govt bodies.
+
+Led the complete migration process from one HRMS system to other which involves payroll, attendance, performance management system, employee self-service etc (Sundaram Business Services).
+
+Maintain employees' attendance in HRMS system and generate attendance reports to stake holders as and when required and for salary processing.
+
+Develop and maintain Human Resources systems that meet HR personnel information needs.
+
+Consult with line management providing HR guidance when appropriate.
+
+Identifying training needs for HR Operations team and individuals.
+
+To maintain personnel dossier for complete employee life cycle.
+
+To take responsibility for specific HR related projects from time to time and as required. Researching, progressing and coordinating the project and make recommendations for future action.
+
+ 
+
+ WNS Global Services as HR Executive
+
+Mar 2012 to Dec 2013
+
+Validate employees' documents, bank account opening and present company policies.
+
+Conducting Induction program for all new hires.
+
+Generate Employee ID's and improve processes based on GAP analysis report.
+
+Record complete life-cycle of the employee using HRMS PeopleSoft.
+
+Identify the requirements from business and process as per policy and procedures of IJP; Plan the IJP calendar in correlation with IJP team and arrange for Competency Based Interviews (CBI) panel for interviews.
+
+Conducts exit interviews, promotion and progression exercise for all job levels in unit and Resource management.
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Com (Commerce) from Madras University in 2008
+
+PG: MBA/PGDM (HR/Industrial Relations) from Pondicherry University in 2014
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+People vision, Oracle HRMS PeopleSoft			
+
+Ramco Virtual works, Formula HR			
+
+Applecart/Cpay V7 & V10			
+
+MS OFFICE",2022-07-24 17:06:37.818352+00:00,,
+18,19,pbkdf2_sha256$320000$ZfVG1QMzSOrzUvfbL9tRem$M6YdjXdvocLffljVwUi45tbB2BF2zUGebc0fDVJXZrI=,2022-08-27 07:29:10.604290+00:00,False,Richie,Amoani,False,True,2022-08-27 05:30:46.161334+00:00, richie@gmail.com  ,employee,M,0244649644,,,,kasoa,,,DIVYA PRAKASH.docx,"['Machine Learning', 'Machine Learning', 'Machine Learning', 'Artificial Intelligence', 'Machine Learning', 'machine learning', 'machine learning', 'Machine Learning', 'python']","DIVYA PRAKASH SINGHFeatured Resume  
+
+ 
+
+Machine Learning Engineer seeking roles in Software Development,Data Analysis,Machine Learning,Deep learning, NLP, Computer vision,Python,MySQL,JSON
+
+
+
+ 
+
+ 
+
+Current Designation: Machine Learning Engineer
+
+Current Company: Unisys
+
+Current Location: Bengaluru / Bangalore
+
+Pref. Location: Bengaluru / Bangalore,Hyderabad,Pune
+
+Functional Area: IT Software - Application Programming / Maintenance
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 2 Year(s) 0 Month(s)
+
+Notice Period: 1 Month
+
+Highest Degree: B.Tech/B.E. [Computers]
+
+ 
+
+Key Skills: Deep learning,Computer vision,Software Development,Python,MySQL,kafka,NoSQL,MongoDB,Machine Learning,Natural Language Processing,Artificial Intelligence,Pattern Recognition,Data Analytics,Linux,tensorflow,keras,NLTK,spacy,sklearn,Ubuntu,R,AI,Openvino
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 19010eddf14541ba81831fb5cb4d0e26Last Active: 1-Sep-20Last Modified: 1-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Skilled professional with 2 years of experience in Data Analysis,Machine Learning,Deep learning, NLP,Computer vision,Python,MySQL,JSON,API,Software Development,Software Designing,Application Programming,Coding,Web development. 
+
+
+
+ 
+
+Work Experience
+
+ Unisys as Machine Learning Engineer
+
+Jul 2020 to Till Date
+
+ 
+
+ WIPRO as Machine Learning Engineer
+
+Jun 2018 to Jun 2018
+
+
+
+CTO-5G ( R&D )
+
+Designed a machine learning pipeline for Cognitive Automation Solution (CAS) tool which analyse
+
+the log files and try to predict the several pattern in different logs. The existing model having 76%
+
+accuracy is replaced and improved with the 99% accuracy.
+
+Designed a traffic voilation with licence plate recognition model which captures the plate number of
+
+the automobiles voilating the traffic rules.
+
+facial recognition for geofencing
+
+OCR
+
+ 
+
+ Wipro as machine learning Engineer
+
+Jun 2018 to Jul 2020
+
+Machine Learning Engineer with 2 years of experience using predictive modeling, data processing, Computer Vision, Machine Learning, Deep Learning with python. Hopes to focus on Data Science in the future career
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Dr Ambedkar Institute of Technology For Handicapped in 2018
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+Python, R.			
+
+SOAP, REST, JSON			
+
+My-SQL, Mongo-DB, Cassandra			
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English		
+
+ 
+
+ 
+
+ 
+
+Hindi",2022-08-30 20:50:27.744912+00:00,,
+19,20,pbkdf2_sha256$320000$zaEwj1OG4Iz0n4DNRwp1d5$2NW1eR/Q90NXdcUyiGBFWHBEXJZkf506TERfCGS9i7A=,2022-09-29 00:04:49.664452+00:00,False,bex.ai,madina,False,True,2022-08-27 05:34:00.085427+00:00,bex@gmail.com,employer,,,,,,,,,,,,2022-08-27 05:34:00.085427+00:00,,
+20,21,pbkdf2_sha256$320000$M86DO9luaSauRjKNMqYYFj$WN9pUcUDRiCKnKaKD8JgEbLruxoIukzZ2GBdZuWdbBI=,2022-09-29 00:03:01.133454+00:00,False,AJ,,False,True,2022-08-27 06:20:24.159270+00:00,aj@gmail.com,employer,N/A,,,,,,,,,,,2022-08-27 06:20:24.159270+00:00,,
+21,22,pbkdf2_sha256$320000$yQHd7DPFZV61GiriZdxSPD$14iqlO4UFoqj1vexmXTQljDEZxgCgmbZ9RaX4+oqzrg=,2022-08-31 00:02:54.779662+00:00,False,Manhyia Montessori,Kumasi,False,True,2022-08-31 00:02:46.404868+00:00,manhyiaschool@gmail.com,employer,,,,,,,,,,,,2022-08-31 00:02:46.404868+00:00,,

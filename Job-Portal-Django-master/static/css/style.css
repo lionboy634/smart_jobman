@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,700");
 
 
-#profileImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: red;
-  font-size: 35px;
-  color: red;
-  text-align: center;
-  line-height: 150px;
-  margin: 20px 0;
-}
 
 
 .site-navbar {
@@ -500,7 +489,7 @@ h1, h2, h3, h4 {
     transform: translateY(-50%);
     font-family: 'icomoon'; }
   .home-section .search-jobs-form .filter-option.dropup {
-    border: 1px solid red !important; }
+    border: 1px solid ; }
     .home-section .search-jobs-form .filter-option.dropup:after {
       display: none; }
   .home-section .search-jobs-form .dropup .dropdown-toggle:after, .home-section .search-jobs-form .dropup .filter-option:after {
@@ -623,7 +612,7 @@ h1, h2, h3, h4 {
   font-family: 'icomoon'; }
 
 .form-group .filter-option.dropup {
-  border: 1px solid red !important; }
+  border: 1px solid; }
   .form-group .filter-option.dropup:after {
     display: none; }
 

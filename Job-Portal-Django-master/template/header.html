@@ -73,16 +73,23 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
        
-        {% if user.role == 'employee' or user.is_anonymous %}
+       {% if user.role == 'employee' %}
         <li class="nav-item">
           <a class="nav-link text-success " href="{% url 'jobapp:job-alert' %}">Job Alert</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link text-success " href="{% url 'jobapp:dashboard' %}">Dashboard</a>
+        </li>
+
+        {% endif %}
+        {% if user.role == 'employee' or user.is_anonymous %}
+        <li class="nav-item">
           <a class="nav-link active text-success" href="{% url 'jobapp:company-list' %}">Company</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-success" href="#">Jobs</a>
+          <a class="nav-link text-success" href="{% url 'jobapp:job-list' %}">Jobs</a>
         </li>
+        
         {% endif %}
         {% if user.is_authenticated and user.role == 'employer'  %}
         <li class="nav-item">
@@ -103,12 +110,13 @@
             <a class="nav-link dropdown-toggle text-success" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="{% url 'account:edit-profile' request.user.id %}">profile</a>
+                <a class="dropdown-item" href="{% url 'jobapp:notifications' %}">notifications</a>
                 <a class="dropdown-item" href="{% url 'account:logout' %}"><span class="caret"></span>logout</a>
                 
             </li>
         </ul>
-        <div id="avatar" class="text-center mx-2" style=" width: 50px;  height: 50px; border-radius: 50%; background-color:#fff; text-align: center; font-size: 25px;" >
-          <a class="text-success">{{user.initials}}</a>
+        <div id="avatar" class="text-center mx-2" style=" width: 50px;  height: 50px; border-radius: 50%; background-color: dimgray; text-align: center; font-size: 25px;" >
+          <a style="color:darkslategray;">{{user.initials}}</a>
         </div>
       
         </div>
@@ -123,7 +131,8 @@
                   
               </li>
               <li class="nav-item">
-                <button class="btn btn-outline-success " href="{% url 'account:login' %}" >Login</button>
+                <a href="{% url 'account:login' %}"
+                  class="js-clone-nav pr-3 btn btn-outline-success border-width-2 d-none d-lg-inline-block text-success">Login</a>
               </li>
           </ul>
           

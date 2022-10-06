@@ -2,9 +2,11 @@ from django.contrib import auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.template.loader import get_template, render_to_string
+from django.template import Context
 from django.shortcuts import render, redirect , get_object_or_404
 from django.urls import reverse, reverse_lazy
-
+from dashboard.tasks import send_email
 from account.forms import *
 from jobapp.permission import user_is_employee 
 from jobmanp.views import handle_uploaded_file
@@ -48,7 +50,14 @@ def employer_registration(request):
 
     form = EmployerRegistrationForm(request.POST or None)
     if form.is_valid():
+        mto = request.POST.get("email")
+        print(mto)
+        mt = "rexilinbrown1@gmail.com"
+        subject = "WELCOME TO JOBMAN"
+        msg = render_to_string("jobapp/welcome.html")
+        send_email.delay(mto, subject, msg)
         form = form.save()
+        
         return redirect('account:login')
     context={
         
@@ -110,6 +119,7 @@ def user_logIn(request):
     
     else:
         if request.method == 'POST':
+            #form is authenticated
             if form.is_valid():
                 auth.login(request, form.get_user())
                 return HttpResponseRedirect(get_success_url(request))

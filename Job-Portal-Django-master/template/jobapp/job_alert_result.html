@@ -4,18 +4,16 @@
 
 {% block content %}
 
-    <section class="section-hero overlay inner-page bg-image"
-  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+<section class=" p-2 bg-light overlay inner-page bg-image" id="home-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-white font-weight-bold">JOB ALERT RESULTS</h1>
-       
+        <h1 class="font-weight-bold" style="color:teal; font-family: 'Handlee', cursive;"> JOB ALERT RESULTS</h1>
       </div>
     </div>
   </div>
 </section>
-<div class="content_div p-5">
+<div class="content_div p-5 bg-light">
   <!-- SEARCH PART -->
   <!--/ SEARCH PART -->
       <!-- main_container starts here -->
@@ -31,13 +29,15 @@
                 <!-- job_list_section starts here -->
                 <div class="col-md-12">
                 <!--job_alert_result_container starts heere -->
-          <a href="{% url 'jobapp:job-alert' %}" target="_blank" class="add_new_alert pull-right">Add New Job Alert</a>                  <div class="clearfix"></div>
+                                    <a href="{% url 'jobapp:job-alert' %}"
+                  class="js-clone-nav pr-3 btn btn-outline-success border-width-2 d-none d-lg-inline-block"><span
+                    class="mr-2 icon-add"></span>Create Job Alert</a>      
                   <div class="job_alert_result_container">
                 <div class="pull-right actions">
                   <a href="{% url 'jobapp:home' %}" class="edit"><i class="fa fa-edit"></i></a>
                   <a href="#" class="alert-delete del" id="{{ job_alert.id }}"><i class="fa fa-trash"></i></a>
                 </div>
-                <div class="title">{{ job_alert.name }}</div>
+    
                 <div class="detail_container">
                   <div class="detail">
                     <div class="detail_title">Email <span class="pull-right">:</span></div>

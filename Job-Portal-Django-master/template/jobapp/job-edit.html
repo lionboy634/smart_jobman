@@ -3,18 +3,18 @@
   {% block content %}
 
     <!-- HOME -->
-    <section class="section-hero overlay inner-page bg-image" style="background-image: url({% static 'images/hero_1.jpg' %});" id="home-section">
+    <section class="bg-light pt-1"   id="home-section">
       <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Post A Job</h1>
-            <div class="custom-breadcrumbs">
-              <a href="#">Home</a> <span class="mx-2 slash">/</span>
-              <a href="#">Job</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>Edit Job</strong></span>
-            </div>
+          <div class="row">
+              <div class="col-md-7">
+                  <h1 class="text-success font-weight-bold" style="font-family: 'Handlee', cursive;">JOB POSTINGS </h1>
+                  <div class="custom-breadcrumbs">
+                      <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+                      <a href="{% url 'jobapp:job-list' %}">Job</a> <span class="mx-2 slash">/</span>
+                      <span class="text-success" style="font-family: 'Handlee', cursive;"><strong>All Applicants </strong></span>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
     </section>
 

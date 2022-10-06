@@ -1,0 +1,1207 @@
+,id,password,last_login,is_superuser,first_name,last_name,is_staff,is_active,date_joined,email,role,gender,mobile,education,profile_pic,employment_history,current_city,permanent_address,preferred_city,resume_title,skills,resume_text,profile_updated,profile_description,activation_code
+0,1,pbkdf2_sha256$320000$Qhbp2m3DjqFNXs6YR37YCM$rI1Q+fR8isB3y6+dgcr8DVKTxccig5l46c2CRdZ1/Sc=,2022-07-12 20:50:13.615842+00:00,False,Rexford,Asiedu,False,True,2022-07-12 20:49:52.540941+00:00,rexilinbrown1@gmail.com,employee,M,,,,,cantoments,,,,,,2022-07-24 14:55:05.845591+00:00,,
+1,3,pbkdf2_sha256$320000$nuubOXwXKf5d1OFwjP8Wqe$6Vp5td6/ZZhu10gaVVXzM8eF0lhCgwOsFgclFKoJQi0=,2022-09-04 23:10:16.081814+00:00,False,collins,Yeboah,False,True,2022-07-12 21:13:14.346588+00:00, collins@gmail.com  ,employee,M,0557458787,,,,madina,,,AJAY CHINNI.docx,,"AJAY CHINNIdocx AJAY CHINNIFeatured Resume   nn nnSeeking roles in Machine Learning Predictive Modeling NLP Data Science 
+Deep Learning Natural Language Processing IoT Artificial Intelligence Image Processing Data Analysis Data Visualization Object Oriented ProgrammingSoftware Engineeringnnnn nn nnCurrent Designation Machine Learning Engineer Current Company PhenompeoplennCurrent Location Hyderabad   SecunderabadnnPref Location Bengaluru   BangaloreDelhi   NCRHyderabadnnFunctional Area IT Software   Application Programming   MaintenancennRole Software Developer Industry ITSoftwareSoftware Services Marital Status Single unmarried Total Experience 3 Years 0 Months Notice Period 2 MonthsnnHighest Degree CS CSnn nnKey Skills Machine LearningPredictive ModelingNLPData Science Deep LearningNatural Language ProcessingIOTArtificial IntelligenceImage ProcessingData AnalysisData VisualizationObject Oriented ProgrammingSoftware EngineeringTensorFlowComputer Visionnn nnVerified    Phone Number    Email   idnn nnID 863c41556ec744d7b178c3c114e76e35Last Active 9Sep20Last Modified 9Sep20nn nnJump to SectionWork Experience   Education   IT Skills nn nn nnSummarynnFullstack Machine Learning Engineer with 3 years accomplishment delivering effective machine learning solutions leveraging predictive modelling NLP and exceptional data science capabilities nnnn nnWork Experiencenn Phenompeople as Machine Learning EngineernnAug 2019 to Till Datenn Achieved a tenfold decrease in website build times by creating ML pipeline to convert images into HTML codes utilising RCNN inception and OCR algorithmsnnnn Reduced server load by 60 and applied LSTM and Facebook Prophet algorithms in creating an optimised scheduler to pull jobsnnnn Deployed machine learning models and implemented extensive UI features like autocorrect and autocomplete to enhance efficiency of HR operations via seq2seq Attention Mechanism and Bert algorithmsnnnn Designed distributed algorithms for identifying trends in unstructured large data using Pysparknn nn Zealeers Technologies as Software Developer Sep 2018 to Jun 2019nn Designed object detection and IoT model to detect fainting as well as machine learning model capable of forecasting stock directions utilising sentiment analysis and time series models Developed and executed test phases for Android applications and Unity games recording bugs and issuing patches to enhance user interface  Web unix as Junior Data Scientist Aug 2017 to May 2018nn Utilised Django in developing web application and RESTful API processing images and recommending relevant apparels via computer vision Applied deep learning and natural language processing 
+in developing prototype chatbot to diagnose patients health conditions and medical statesnn nn Back to Topnn nnEducationnnUG BTechBE Computers from Lovely Professional University LPU in 2017nnPG CS CS from Lovely Professional University LPU in 
+2017nn nn nn Back to Topnn nnIT Skills Skill Name Version Last Used ExperiencennMachine learning Deep learningtttnnpython JAVA sqltttnnDjango Docker Natural Language Processingttt2 YearsnnComputer Visionttt2 YearsnnKerasttt2 Years Tensoflow Years Back to Top Languages Known LanguageProficiencytReadtWritetSpeaknnEnglishtt t t nnHinditt t t nnTelugu",2022-09-04 23:11:50.707555+00:00,,
+2,16,pbkdf2_sha256$320000$0tkBBVtao89QZ61qjPjpZr$E90bbtpXMONBfxtVCVxjv8kxpoXbrMZlAO027eTY3iY=,2022-10-01 01:26:38.955918+00:00,False,Kofi,Blackman,False,True,2022-07-20 12:37:31.729604+00:00,emmawax@gmail.com,employee,M,,,,,,,,AJAY CHINNI.docx,"['Artificial Intelligence', 'Machine Learning', 'machine learning', 'HTML', 'Machine learning', 'python']","AJAY CHINNIFeatured Resume  
+
+ 
+
+Seeking roles in Machine Learning, Predictive Modeling, NLP, Data Science, Deep Learning, Natural Language Processing, IoT, Artificial Intelligence, Image Processing, Data Analysis, Data Visualization, Object-Oriented Programming,Software Engineering
+
+
+
+ 
+
+ 
+
+Current Designation: Machine Learning Engineer
+
+Current Company: Phenompeople
+
+Current Location: Hyderabad / Secunderabad
+
+Pref. Location: Bengaluru / Bangalore,Delhi / NCR,Hyderabad
+
+Functional Area: IT Software - Application Programming / Maintenance
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 3 Year(s) 0 Month(s)
+
+Notice Period: 2 Months
+
+Highest Degree: CS [CS]
+
+ 
+
+Key Skills: Machine Learning,Predictive Modeling,NLP,Data Science,Deep Learning,Natural Language Processing,IOT,Artificial Intelligence,Image Processing,Data Analysis,Data Visualization,Object Oriented Programming,Software Engineering,TensorFlow,Computer Vision
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 863c41556ec744d7b178c3c114e76e35Last Active: 9-Sep-20Last Modified: 9-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Full-stack Machine Learning Engineer with 3 years, accomplishment delivering effective machine learning solutions leveraging predictive modelling, NLP, and exceptional data science capabilities. 
+
+
+
+ 
+
+Work Experience
+
+ Phenompeople as Machine Learning Engineer
+
+Aug 2019 to Till Date
+
+* Achieved a tenfold decrease in website build times by creating ML pipeline to convert images into HTML codes utilising RCNN, inception, and OCR algorithms.
+
+
+
+* Reduced server load by 60% and applied LSTM and Facebook Prophet algorithms in creating an optimised scheduler to pull jobs.
+
+
+
+* Deployed machine learning models and implemented extensive UI features like autocorrect and autocomplete to enhance efficiency of HR operations via seq2seq, Attention Mechanism, and Bert algorithms.
+
+
+
+* Designed distributed algorithms for identifying trends in unstructured large data using Pyspark.
+
+ 
+
+ Zealeers Technologies as Software Developer
+
+Sep 2018 to Jun 2019
+
+* Designed object detection and IoT model to detect fainting, as well as machine learning model capable of forecasting stock directions utilising sentiment analysis and time series models.
+
+
+
+* Developed and executed test phases for Android applications and Unity games, recording bugs and issuing patches to enhance user interface.
+
+ 
+
+ Webtunix as Junior Data Scientist
+
+Aug 2017 to May 2018
+
+* Utilised Django in developing web application and RESTful API, processing images and recommending relevant apparels via computer vision.
+
+
+
+* Applied deep learning and natural language processing in developing prototype chatbot to diagnose patients' health conditions and medical states.
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Lovely Professional University (LPU) in 2017
+
+PG: CS (CS) from Lovely Professional University (LPU) in 2017
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+Machine learning, Deep learning			
+
+python, JAVA, sql			
+
+Django, Docker			
+
+Natural Language Processing			2 Year(s)
+
+Computer Vision			2 Year(s)
+
+Keras			2 Year(s)
+
+Tensoflow			2 Year(s)
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English		 	 	 
+
+Hindi		 	 	 
+
+Telugu",2022-07-24 14:55:05.845591+00:00,,
+3,17,pbkdf2_sha256$320000$LKecHXasFW8AZgvMtFilN2$yYLD4qD7MbSjW9EFPuVKHLtPtKSwv5clxEAQ/TrRvIg=,2022-10-01 01:27:01.210464+00:00,False,Brown,Acheampong,False,True,2022-07-21 15:43:41.324411+00:00,brown@gmail.com,employee,N/A,,,,,madina,,,Abhishek Sharma.docx,"['Machine Learning', 'python', 'MACHINE LEARNING']","Abhishek SharmaFeatured Resume  
+
+ 
+
+Developer seeking roles in ETL Development,Machine Learning,Airflow,Google Cloud Platform,Linux,Hadoop,SQL,C,C++,Python
+
+
+
+ 
+
+ 
+
+Current Designation: Data Engineer
+
+Current Company: Datametica Solutions Pvt. Ltd.
+
+Current Location: Pune
+
+Pref. Location: Pune,Noida,Gurgaon
+
+Functional Area: IT Software - DBA / Datawarehousing
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 1 Year(s) 2 Month(s)
+
+Notice Period: 15 Days or less
+
+Highest Degree: B.Tech/B.E. [Computers]
+
+ 
+
+Key Skills: Software Developer,Database Development,ETL Development,Machine Learning,Airflow,Google Cloud Platform,Linux,Hadoop,SQL,C,C++,Python
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: fca9a2e1860d46be83b1732b58f6692fLast Active: 10-Sep-20Last Modified: 10-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Result-oriented Professional with 1.2 year of experience in ETL Development, Machine Learning, Airflow, Google Cloud Platform, Linux, Hadoop, SQL, C, C++, Python. 
+
+
+
+ 
+
+Work Experience
+
+ Datametica Solutions Pvt. Ltd. as Data Engineer
+
+Jul 2019 to Till Date
+
+Development of business logic to ETL pipelines.
+
+Development of utilities in python to automate tasks.
+
+Development in GCP Pub/Sub for the real time ingestion of the data.
+
+Transformation of implemented business logic in Cloud composer.
+
+ 
+
+ GeeksforGeeks.org as Technical Content Writer
+
+Nov 2017 to Dec 2017
+
+Worked as a Technical ContentWriter and got published 35 articles. Most of the articles are on Machine
+
+learning.
+
+Profile link:https://auth.geeksforgeeks.org/user/Abhishek%20Sharma%2044/articles
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Graphic Era University, DEHRADUN in 2019
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+C			
+
+SQL			
+
+Linux			
+
+CPP			
+
+Google Cloud			
+
+Big Query			
+
+MACHINE LEARNING			
+
+CLASSIFICATION			
+
+airflow			
+
+COMPOSER			
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English		 	 	 
+
+Hindi",2022-07-24 14:55:05.845591+00:00,,
+4,18,pbkdf2_sha256$320000$bENjnODr5sj7kBAVR9jdmS$2KJRYxfxg9mbtdMRmA/QdBSU0u3k1sL8RseuUd4A5nQ=,2022-10-01 01:25:19.495887+00:00,False,Ella,Forson,False,True,2022-07-24 17:06:37.818352+00:00,ella@gmail.com,employee,F,,,,,madina,,,Arun Kumar.docx,[],"Arun Kumar UFeatured Resume  
+
+ 
+
+HR Manager seeking assignments in HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management
+
+
+
+ 
+
+ 
+
+Current Designation: HR Manager (Payroll & Compliance)
+
+Current Company: Ecare India Pvt Limited
+
+Current Location: Chennai
+
+Pref. Location: Bengaluru / Bangalore,Chennai,Hyderabad
+
+Functional Area: HR / Administration / IR
+
+Role: HR Manager
+
+Industry: BPO/ITES
+
+Marital Status: Single/unmarried
+
+Total Experience: 12 Year(s) 0 Month(s)
+
+Notice Period: 2 Months
+
+Highest Degree: MBA/PGDM [HR/Industrial Relations]
+
+ 
+
+Key Skills: HR Manager,HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management,Industrial Relation
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 4e238c2e470b2ccd32Last Active: 17-Sep-20Last Modified: 17-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Highly Effective Human Resources Manager with over 12+ years of experience specializing in establishing productive business relationships and resolving critical human capital business issues. Demonstrated competencies in carrying out multiple tasks simultaneously, meeting tight deadlines, maintaining strict confidentiality of company records, coordinating with third parties and surpassing performance parameters. Well-equipped in organizing groups, preparing documentations and reporting. Proactive and efficient team player, sports oriented with excellent analytical, problem solving, organization, coordination, time management, communication and interpersonal skills. 
+
+
+
+ 
+
+Work Experience
+
+ Ecare India Pvt Limited as HR Manager (Payroll & Compliance)
+
+May 2017 to Till Date
+
+Responsible for error free, end to end payroll processing and on-time salary disbursement.
+
+Maintaining payroll information by designing systems, calculation, and entering of data.
+
+Updating payroll records by reviewing and approving changes in exemptions, Employee CTC, Insurance/Mediclaim coverage, savings deductions, job titles, and department/ division transfers.
+
+Paying employees by directing the production and issuance of paychecks or electronic transfers to bank accounts and distributing payslips electronically on timely manner.
+
+Preparing reports by compiling summaries of earnings, taxes, deductions, leave wages and registers.
+
+Preparing thorough workings and remitting employee statutory benefits such as Employee State Insurance Corp (ESI), Provident Fund (PF), Gratuity, Labor Welfare Fund (LWF), Professional Tax (P.Tax) and ensuring with Management for payment closure on timely manner.
+
+Handling compliance administration such as PF Transfer requests, PF claim queries, PF KYC updations, ESI Maternity benefit claims, Death claim process from ESI/PF/Gratuity.
+
+Responsible for maintenance of accurate Payroll Inputs such as Personnel Entry, Separations, Bonus payments, Interim Hikes, Incentive payouts, Salary accounts, leave encashment payouts, deductions.
+
+Determining payroll liabilities by approving the calculation of employee state income and social security taxes, employer's social security, and workers compensation payments.
+
+Hosting and completing Bi-annual Appraisal system, complete Budget workings, Salary grid workings
+
+Designation wise average salary analysis), letter generation and giving effect in Payroll with nil error.
+
+Balancing the payroll accounts by resolving payroll discrepancies.
+
+Providing payroll information by resolving queries.
+
+Maintaining payroll guidelines by writing and updating policies and procedures.
+
+Responsible for Attendance administration and monthly Attendance record keeping for all employees.
+
+Complying with state and local legal requirements by studying existing and new legislation; enforcing adherence to requirements; advising management on needed actions.
+
+Maintaining employee confidence and protecting payroll operations by keeping information confidential.
+
+Maintaining professional and technical knowledge by reviewing professional publications; establishing personal networks; participating in professional societies.
+
+Coordinating with vendor for payroll systems.
+
+
+
+HR Manager (Business Partnering)
+
+Second-in-line command for everything related to Human Resource Management of the Organization.
+
+Ensured compliance of Human Resource policy, employee benefits and employment law at all levels.
+
+Managed HR Operations & HR Business Partnering (for both Day & Night business) functions with a team size of 3 & providing adequate mentorship to the Associates consistently.
+
+Provided confidential issue resolution while working with various levels of management.
+
+Advise Managers on Organizational policies and recommend needed changes.
+
+Participating in the Quarterly Management review meetings representing HR Department and working on improvements.
+
+Plan and implement recreational events (monthly fun, yearly cultural & sports events) and budget approvals.
+
+Representing employer in High court, Labor Court, Police Station, Advocates and other Govt bodies as and when required, for handling legal issues.
+
+Being an approved Interview panelist of the Organization, responsible to be a part of IJP and Promotion interviews, analyze and provide recommendations to the Management.
+
+Responsible to conduct orientation to foster positive attitude towards Organizational objectives.
+
+Serve as a link between Management and employees by handling employee issues, incident arise, PIP and serving to resolve work-related problems to foster positive environment.
+
+Responsible for conducting and providing innovative ideas for Rewards & Recognition program on quarterly basis.
+
+ 
+
+ Sundaram Business Services Limited as HR Officer
+
+Dec 2013 to May 2017
+
+Consult with line management and provide daily HR guidance.
+
+Resolve complex employee relations issues and address grievances.
+
+Work closely with management and employees to improve work relationships, build morale and increase productivity and retention.
+
+Organizing and conducting induction for new hires, preserving moral and taking care of their welfare.
+
+Responsible for initiation and completion of Performance Management System (PMS)
+
+Handling ISO, ISMS and other internal and external audits.
+
+Responsible for conducting one to one/group connects to understand employees concerns and to recommend organization on possible implementation of changes/improvements.
+
+Responsibility, with the HR department to ensure that all HR policies and procedures are regularly reviewed and continue to reflect both up-to-date employment law and best practice.
+
+Reviewing staff awards processes (R&R) and to design an effective staff award system which recognizes excellent performance.
+
+Conducting retention discussion for resigned personnel to find possible means to retain them.
+
+Provide HR policy guidance.
+
+Identifying training needs for teams and individuals.
+
+Suggest new HR strategies.
+
+Responsible for specific HR related projects from time to time and as required. Researching, progressing and coordinating the project and make recommendations for future actions.
+
+Organizing fun @ work activities.
+
+
+
+HR Officer (HR Operations)- Sundaram Business Services Limited
+
+Managed HR Operations function with a team size of 4 & providing adequate mentorship consistently.
+
+Responsible for error free payroll processing and on time salary disbursement.
+
+To coordinate with the finance & MIS department for monthly payroll system, make necessary needful for new joiners, separations, unpaid leave, salary advances, etc. Follow-up with Bank for timely credit of salary & Issuing salary slips.
+
+Preparing complete workings and remitting employee statutory benefits such as Employee State Insurance Corp (ESI), Provident Fund (PF), Gratuity, Labor Welfare Fund (LWF), Professional Tax (P.Tax) and ensuring with Management for payment closure on a timely manner.
+
+Research, implement and administer all company benefit plans.
+
+Maintain all organization policies, procedures and provide guidance and Interpretation to staff.
+
+Ensure all data (new staff, transfers, promotions) and employment changes (Salary changes, separations) are maintained for two group entities of Sundaram Finance which carries employee base of 1000+.
+
+Maintain in-depth knowledge of legal requirements related to HR, reducing legal risks and ensuring all statutory compliance & timely remittances to Govt bodies.
+
+Led the complete migration process from one HRMS system to other which involves payroll, attendance, performance management system, employee self-service etc (Sundaram Business Services).
+
+Maintain employees' attendance in HRMS system and generate attendance reports to stake holders as and when required and for salary processing.
+
+Develop and maintain Human Resources systems that meet HR personnel information needs.
+
+Consult with line management providing HR guidance when appropriate.
+
+Identifying training needs for HR Operations team and individuals.
+
+To maintain personnel dossier for complete employee life cycle.
+
+To take responsibility for specific HR related projects from time to time and as required. Researching, progressing and coordinating the project and make recommendations for future action.
+
+ 
+
+ WNS Global Services as HR Executive
+
+Mar 2012 to Dec 2013
+
+Validate employees' documents, bank account opening and present company policies.
+
+Conducting Induction program for all new hires.
+
+Generate Employee ID's and improve processes based on GAP analysis report.
+
+Record complete life-cycle of the employee using HRMS PeopleSoft.
+
+Identify the requirements from business and process as per policy and procedures of IJP; Plan the IJP calendar in correlation with IJP team and arrange for Competency Based Interviews (CBI) panel for interviews.
+
+Conducts exit interviews, promotion and progression exercise for all job levels in unit and Resource management.
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Com (Commerce) from Madras University in 2008
+
+PG: MBA/PGDM (HR/Industrial Relations) from Pondicherry University in 2014
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+People vision, Oracle HRMS PeopleSoft			
+
+Ramco Virtual works, Formula HR			
+
+Applecart/Cpay V7 & V10			
+
+MS OFFICE",2022-07-24 17:06:37.818352+00:00,,
+5,19,pbkdf2_sha256$320000$ZfVG1QMzSOrzUvfbL9tRem$M6YdjXdvocLffljVwUi45tbB2BF2zUGebc0fDVJXZrI=,2022-08-27 07:29:10.604290+00:00,False,Richie,Amoani,False,True,2022-08-27 05:30:46.161334+00:00, richie@gmail.com  ,employee,M,0244649644,,,,kasoa,,,DIVYA PRAKASH.docx,"['Machine Learning', 'Machine Learning', 'Machine Learning', 'Artificial Intelligence', 'Machine Learning', 'machine learning', 'machine learning', 'Machine Learning', 'python']","DIVYA PRAKASH SINGHFeatured Resume  
+
+ 
+
+Machine Learning Engineer seeking roles in Software Development,Data Analysis,Machine Learning,Deep learning, NLP, Computer vision,Python,MySQL,JSON
+
+
+
+ 
+
+ 
+
+Current Designation: Machine Learning Engineer
+
+Current Company: Unisys
+
+Current Location: Bengaluru / Bangalore
+
+Pref. Location: Bengaluru / Bangalore,Hyderabad,Pune
+
+Functional Area: IT Software - Application Programming / Maintenance
+
+Role: Software Developer
+
+Industry: IT-Software/Software Services
+
+Marital Status: Single/unmarried
+
+Total Experience: 2 Year(s) 0 Month(s)
+
+Notice Period: 1 Month
+
+Highest Degree: B.Tech/B.E. [Computers]
+
+ 
+
+Key Skills: Deep learning,Computer vision,Software Development,Python,MySQL,kafka,NoSQL,MongoDB,Machine Learning,Natural Language Processing,Artificial Intelligence,Pattern Recognition,Data Analytics,Linux,tensorflow,keras,NLTK,spacy,sklearn,Ubuntu,R,AI,Openvino
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 19010eddf14541ba81831fb5cb4d0e26Last Active: 1-Sep-20Last Modified: 1-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills |
+
+ 
+
+ 
+
+Summary
+
+Skilled professional with 2 years of experience in Data Analysis,Machine Learning,Deep learning, NLP,Computer vision,Python,MySQL,JSON,API,Software Development,Software Designing,Application Programming,Coding,Web development. 
+
+
+
+ 
+
+Work Experience
+
+ Unisys as Machine Learning Engineer
+
+Jul 2020 to Till Date
+
+ 
+
+ WIPRO as Machine Learning Engineer
+
+Jun 2018 to Jun 2018
+
+
+
+CTO-5G ( R&D )
+
+Designed a machine learning pipeline for Cognitive Automation Solution (CAS) tool which analyse
+
+the log files and try to predict the several pattern in different logs. The existing model having 76%
+
+accuracy is replaced and improved with the 99% accuracy.
+
+Designed a traffic voilation with licence plate recognition model which captures the plate number of
+
+the automobiles voilating the traffic rules.
+
+facial recognition for geofencing
+
+OCR
+
+ 
+
+ Wipro as machine learning Engineer
+
+Jun 2018 to Jul 2020
+
+Machine Learning Engineer with 2 years of experience using predictive modeling, data processing, Computer Vision, Machine Learning, Deep Learning with python. Hopes to focus on Data Science in the future career
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computers) from Dr Ambedkar Institute of Technology For Handicapped in 2018
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+Python, R.			
+
+SOAP, REST, JSON			
+
+My-SQL, Mongo-DB, Cassandra			
+
+^ Back to Top
+
+Languages Known
+
+Language	Proficiency	Read	Write	Speak
+
+English		
+
+ 
+
+ 
+
+ 
+
+Hindi",2022-08-30 20:50:27.744912+00:00,,
+6,23,pbkdf2_sha256$320000$gc9PKU8b0L2M8XMhxTzVx1$ZKEU92uIbcLOdPWIa31FgUfD3EX4MluQfyOcPPiZ2BA=,2022-10-01 01:27:56.586846+00:00,False,Paintsil,Kobina,False,True,2022-09-29 20:25:52.882346+00:00,kobina@gmail.com,employee,M,,,,,Takoradi,,,Amruta B.pdf,"['java', 'html', 'javascript', 'eclipse', 'HTML']","Amruta B. ThoratFeatured Resume
+Jr. Web Developer seeking assignment in Software Development,Web Application Development,Project Management,Requirement Gathering,Unit Testing,Software Design,C,C++,Core Java,C#,Asp.Net,MVC,XML,Html,JavaScript,Eclipse,Microsoft Visual Studio.
+Current Designation: Junior Web Developer Current Company: Krisol Infosoft Current Location: Mumbai Pref. Location: Mumbai,Navi Mumbai Functional Area: IT Software - Application Programming / Maintenance Role: Software Developer Industry: IT-Software/Software Services Marital Status: Married Total Experience: 1 Year(s) 0 Month(s) Notice Period: 15 Days or less Highest Degree: MCA [Computers]
+Key Skills: jr. web developer,software developer,software development,web application development,project management,unit testing,c,c++,core java,c#,asp.net,mvc,xml,html,javascript,eclipse,microsoft visual studio
+Verified : Phone Number | Email - id
+ID: 3003ff1d762e4a1063Last Active: 11-Sep-20Last Modified: 11-Sep-20
+Jump to SectionWork Experience | Education | IT Skills |
+Summary
+
+Percuing MCA in 2nd year with 1 years experience in Software Development,Web Application Development,Project Management,Unit Testing,Software Design,C,C++,Core Java,C#,Asp.Net,MVC,XML,Html,JavaScript.
+Work Experience krisol infosoft as Junior Web Developer Jan 2019 to Jan 2020 The role is responsible for designing, coding and modifying websites, from layout to function and according to a client's specifications. Writing well designed, testable, efficient code by using best software development.Handling Client queries and working on both development and Support Team.
+Krisol Infosoft as Junior Web Developer Jan 2019 to Till Date The role is responsible for designing, coding and modifying websites, from layout to function and according to a client's specifications. Writing well designed, testable, efficient code by using best software development.Handling Client queries and working on both development and Support Team.
+Krisol Infosoft Pvt. Ltd as Jr. Web Developer Jan 2019 to Jan 2020 * Developing in-house ERP projects in ASP.NET and SQL/Oracle * Worked on telerik applications * Responsible for the developing in-house ERP projects in (ASP.NET+SQL), (ASP.NET+ oracle 12c), API projects for supporting android app. Worked on web services * Handling the problem and troubleshooting * Unit Testing and Documentations * Directing or performing Website updates * Website and software application designing, building, or maintaining
+^ Back to Top
+
+Education UG: B.Sc (Computers) from Mumbai University in 2016 PG: MCA (Computers), Correspondence/Distance Learning from Mumbai University in 2020 Other Qualifications/Certifications/Programs: * Certified with SCTST-JAVA from Seed Infotech including C, SQL, J2SE, and J2EE.
+
+^ Back to Top
+
+IT Skills
+
+Skill Name Version Last Used
+
+Experience
+
+C, C++, Core Java, C#,Asp.Net with MVC
+
+SQL (Oracle 12C)
+
+XML, HTML, JavaScript
+
+Eclipse, Microsoft Visual Studio 2017
+
+WINDOWS
+
+^ Back to Top
+
+Languages Known
+
+Language
+
+Proficiency Read Write Speak
+
+English
+
+Hindi
+
+Marathi
+
+",2022-09-29 20:25:52.882346+00:00,,
+7,24,pbkdf2_sha256$320000$pveOD7keJqyD5LiRJdvfvi$kpvpmONM9LHvnh+bywKjGJhb8VepLLqUV/E/G9N5LnE=,2022-10-01 01:31:44.966879+00:00,False,Othniel,Wiredu,False,True,2022-10-01 00:14:35.778131+00:00,othniel@gmail.com,employee,M,,,,,Kumasi,,,Vipin Kumar.docx,[],"Vipin KumarFeatured Resume  
+
+ 
+
+HR Manager seeking assignments in HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management
+
+
+
+ 
+
+ 
+
+Current Designation: Manager HR & Administration
+
+Current Company: Bawana Infra Development
+
+Current Location: Delhi
+
+Pref. Location: Chandigarh,Delhi / NCR,Jaipur
+
+Functional Area: HR / Administration / IR
+
+Role: HR Manager
+
+Industry: Construction/Engineering/Cement/Metals
+
+Marital Status: Married
+
+Total Experience: 14 Year(s) 0 Month(s)
+
+Notice Period: 15 Days or less
+
+Highest Degree: MBA/PGDM [HR/Industrial Relations]
+
+ 
+
+Key Skills: HR Manager,HR Management,Administration,Recruitment,Employee Engagement,Talent Acquisition,Training & Development,Manpower Planning,Performance Management,Compensation & Benefits,Organizational Development,Facility Management,Screening,Interviewing
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 59d67f6e197785c024Last Active: 17-Sep-20Last Modified: 16-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education |
+
+ 
+
+ 
+
+Summary
+
+An HR professional having 14 years of rich and varied experience in the field of Human Resource Management. Handling entire gamut including HR, Industrial Relations, Administration, Liaison functions with a generalist profile and key focus on innovation in HR practices. 
+
+
+
+ 
+
+Work Experience
+
+ MS Bawana Infra Development Pvt. Ltd. as Manager HR and Administration
+
+Jan 2020 to Jul 2020
+
+Company Profile: - Construction work, Facility and maintenance work.
+
+Job Profile:-
+
+Human Resources:
+
+Recruitment; maintain data base, Screening resume, Scheduling of Interviews, Interview.
+
+Freezing the final round of interview, reference checking & verification, salary negotiation.
+
+Fixation of salary and designation, issuing of offer letter and appointment letter.
+
+Exit interview and issuing Reliving letter & full and final statement of existing employees.
+
+Standardized the joining formalities process of new employees (welcome circular, Introduction, Emp. Code, ID card, Bank account, Reference check etc.)
+
+Making Induction of the new employees to make them aware of the organization policies, procedures, facilitating their interaction with different functional heads of the different departments.
+
+Handling various issue/queries, complaints, grievances, disputes related to various HR departments.
+
+Monitoring Selection process, Placement, Increments, Promotion.
+
+Organize training programs on various levels of employees as per requirement.
+
+Maintain Appraisal details (Half day, Leave day, late days, productivity etc.)
+
+Salary processing, Distribution of salary & Wages Administration.
+
+Personnel & Administration:-Time office, Security, Transport, Canteen Management, Housekeeping and General Office administration.
+
+Statutory Compliance: -s
+
+Obtaining/renewal of Labour license under CLA
+
+Handling all labour cases in labour court.
+
+Coordination with PF and ESI department.
+
+Registration under BOCW act.
+
+Handling all Liaoning like as Govt. department, Labour office, Industrial Health and Safety.
+
+ 
+
+ Bawana Infra Development as Manager HR & Administration
+
+Jan 2020 to Till Date
+
+NA
+
+ 
+
+ Ms Steiner India Ltd. (Part of HCC group) as Administration Officer
+
+Jun 2018 to Dec 2019
+
+ 
+
+ Ms Unitech Ltd. as Executive HR and Admin
+
+Feb 2011 to Jun 2018
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: LLB (Law) from Ch Charan Singh University (CCSU), Meerut in 2015
+
+PG: MBA/PGDM (HR/Industrial Relations) from Sikkim Manipal University (SMU) in 2011
+
+Other Qualifications/Certifications/Programs:
+
+MCA
+
+Graduation",2022-10-01 00:14:35.778131+00:00,,
+8,25,pbkdf2_sha256$320000$hyF3lGeZGABhJjY3kfjNEz$ZkqMuAg/Kn3JNg9sPvdYxrq3nM7GOjz6XOUWlaIJybA=,2022-10-01 01:46:59.243543+00:00,False,Emmanuel,Boakye,False,True,2022-10-01 00:18:52.595111+00:00,boakye@gmail.com,employee,M,,,,,kumasi,,,Swati Mehta.docx,[],"Swati MehtaFeatured Resume  
+
+ 
+
+Sales & Marketing Head seeking roles in Sales,Marketing,Business Development,Key Account Management,Channel Sales,Strategic Planning,Product Promotions,Revenue Generation,Sales Strategy,Market Research,Brand Management,Client Servicing,P&L Management
+
+
+
+ 
+
+ 
+
+Current Designation: Sales and Marketing Head
+
+Current Company: Jai Bajrang Steels
+
+Current Location: Jaipur
+
+Pref. Location: Jaipur
+
+Functional Area: Sales / BD
+
+Role: Sales/BD Mgr
+
+Industry: Construction/Engineering/Cement/Metals
+
+Marital Status: Single/unmarried
+
+Total Experience: 6 Year(s) 0 Month(s)
+
+Notice Period: Currently Serving Notice Period
+
+Highest Degree: M.A [Economics]
+
+ 
+
+Key Skills: Sales & Marketing Head,Sales/BD Manager,Sales,Marketing,Business Development,Key Account Management,Channel Sales,Strategic Planning,Product Promotions,Revenue Generation,Sales Strategy,Market Research,Brand Management,Client Servicing,P&L Management
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 56a18e4d66a0ff9570Last Active: 17-Sep-20Last Modified: 17-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education |
+
+ 
+
+ 
+
+Summary
+
+Skilled professional with 6 years of experience in Sales,Marketing,Business Development,Key Account Management,Channel Sales,Strategic Planning,Product Promotions,Revenue Generation,Sales Strategy,Market Research,Brand Management,Client Servicing,P&L Management 
+
+
+
+ 
+
+Work Experience
+
+ Jai Bajrang Steels as Sales and Marketing Head
+
+Jul 2019 to Jul 2020
+
+Team Handling of around 60-70 people
+
+Carrying out the branding activities & coordination with the company regarding branding plan to achieve sales target according to the set budgets.
+
+Evaluating and reviewing the performance of the Area Sales Officers.
+
+Understanding the problems of the dealers & providing the necessary resolution to it.
+
+Framing various schemes and checking their development in order to increase the sale targets.
+
+Coordination with all the builder groups in order to generate business from them.
+
+Negotiating with the vendors for the purchase of products for carrying out the Contractor schemes.
+
+Handing the Trade section for Wonder Cement
+
+ 
+
+ Jai Bajrang Steels as Sales and Marketing Head
+
+Jul 2019 to Till Date
+
+ 
+
+ JPC Group as Head Relationship Manager
+
+Aug 2018 to Aug 2019
+
+Handling a team of around 30 people
+
+Training new team members, taking mock calls, assisting team with cold calling, handling issues.
+
+Meeting HNI Clients and taking meetings for final pricing scheduled for the closings.
+
+Meeting Brokers and associating them with the company so targets can be achieved.
+
+Coordinating with vendor agencies for updated requirement for IVR, Digital Marketing, Website
+
+Development.
+
+Understanding and updating the software changes to the vendor agency.
+
+Reviewing the monthly performance reports of employees and working upon their betterment.
+
+Framing and implementing the corrective measures required for the growth opportunities.
+
+Framing company policies and updating the employees as per the management.
+
+Taking interviews and completing joining and relieving formalities of the employees
+
+Checking and approving the salary sheets and incentive distribution every month.
+
+Addressing customer and employee satisfaction issues promptly
+
+Reporting about the issues and performance of the company to top level management.
+
+Setting up the monthly targets and framing lucrative sales incentive plans on achieving them.
+
+Analyzing the suggestive changes required and taking approvals for them from the top level management
+
+ 
+
+ PG & Companies as General Manager and a Trainer
+
+Dec 2015 to Aug 2018
+
+-Meeting New Clients and making sure to make business from them for the company.
+
+-Coordinating with different department for all the coordination
+
+-Preparing Training Manuals, Presentations and Training new recruits in the efficient manner.
+
+-Timely completion of process training which has created sufficient backup.
+
+-Solve customer's queries regarding to payment status and vendor management
+
+-Training and Development of the staff at the managerial and subordinate level.
+
+-Addressing the vendor agency and updating them about the upcoming requirements.
+
+-Locate areas of improvement and propose corrective action that meet challenges and leverage growth opportunities
+
+-Address customer and employee satisfaction issues promptly.
+
+-Plan approaches and pitches ""Work with the team to develop proposals that speak to the client's needs, concerns and objectives.
+
+-Ensuring that plans as directed are executed with the best of the potential.
+
+-Evaluation of result and preparing report on the same
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Com (Commerce) from s.s jain subodh pg mahavidyalaya in 2015
+
+PG: M.A (Economics) from IIS University jaipur in 2017
+
+Other Qualifications/Certifications/Programs:
+
+Mcom & MA
+
+PRT Insurance agents
+
+CPT
+
+ 
+
+ 
+
+^ Back to Top
+
+Languages Known",2022-10-01 00:18:52.595111+00:00,,
+9,26,pbkdf2_sha256$320000$6e6rh3qhDQMsAKV7u05zrM$tW/tVeprBxT1fNMWyNJ99YGrPeJ9OUd1Z3YIM/4+Nj4=,2022-10-01 01:48:15.256463+00:00,False,Dennis,Owusu,False,True,2022-10-01 00:26:17.342890+00:00,dennis@gmail.com,employee,M,,,,,suyani,,,Chakuswanu.docx,[],"C.Karthik RajaFeatured Resume  
+
+ 
+
+Retail Sales Officer seeking roles in Sales, Marketing, Business Development, Channel Management, Brand Management, Product Promotion, Competitor Analysis, Trend Analysis, Key Account Management, B2B Marketing, Channel Sales, Retail Operations
+
+
+
+ 
+
+ 
+
+Current Designation: Retail Sales Officer (Marketing)
+
+Current Company: Saint Gobain India Pvt Ltd - (Glass Business)
+
+Current Location: Chennai
+
+Pref. Location: Chennai,Pondicherry,Cuddalore
+
+Functional Area: Sales / BD
+
+Role: Area Sales Manager
+
+Industry: Construction/Engineering/Cement/Metals
+
+Marital Status: Single/unmarried
+
+Total Experience: 9 Year(s) 0 Month(s)
+
+Notice Period: 2 Months
+
+Highest Degree: MBA/PGDM [Marketing]
+
+ 
+
+Key Skills: Retail Sales Officer, Area Sales Manager, Sales, Marketing, Business Development, Channel Management, Brand Management, Product Promotion, Competitor Analysis, Trend Analysis, Key Account Management, B2B Marketing, Channel Sales, Retail Operations
+
+ 
+
+Verified :  Phone Number |  Email - id
+
+ 
+
+ID: 084b7a5f6f94106179Last Active: 18-Sep-20Last Modified: 18-Sep-20
+
+ 
+
+Jump to SectionWork Experience | Education | IT Skills | Work Authorization
+
+ 
+
+ 
+
+Summary
+
+A competent professional with over 9 years of experience in Sales, Marketing, Business Development, Channel Management, Brand Management, Product Promotion, Competitor Analysis, Trend Analysis, Key Account Management, B2B Marketing, Channel Sales, Retail Operations and closes business deals and maintains extensive knowledge of current market conditions. Build long-term relationships with new and existing customers vast experience with branding and introducing new products. Superb understanding of business sense and strategies promote new products, and interact with new clients in order to develop sustained business for the organization. 
+
+
+
+ 
+
+Work Experience
+
+ Saint Gobain India Pvt Ltd - (Glass Business) as Retail Sales Officer (Marketing)
+
+Aug 2014 to Till Date
+
+Job Highlights:
+
+Handled Retail Channels in 11 districts (Kanchipuram,Vellore, Dharmapuri, Krishnagiri, Thiruvannamalai, Villupuram, Cuddalore, Nagapattinam, Thanjavur, Thiruvarur, Pudukkottai) of Tamilnadu state and 1 district (Karaikal) in Pondicherry state.
+
+Handling Retail Channels in Chennai market from January 2019.
+
+Received South India's Best Retail Officer Award for the consecutive 2 times.
+
+ 
+
+ Kansai NEROLAC Paints Ltd as Territory Sales Supervisor (Marketing)
+
+Aug 2012 to Jul 2014
+
+Job Highlights:
+
+Handled Retail Channels in Pondicherry, Villupuram district & Cuddalore district.
+
+Placed 22 automatic Paint tinting machines and opened 40 new dealer accounts.
+
+Opened South India's first Nerolac Impression Shopee Exclusive showroom in Cuddalore, with against cash billing of Rupees 15 lakhs material in a single day.
+
+ 
+
+ SNOWCEM Paints Pvt Ltd as SALES EXECUTIVE (Marketing)
+
+Aug 2011 to Aug 2012
+
+Job Highlights:
+
+Handled Retail Channels in Cuddalore District and opened 28 new dealer accounts.
+
+Achieved Thiruvannamalai District Court Project painting worth Rupees 10 lakhs by repeated follow up of Tamil Nadu's leading government contractor P.S.K Constructions.
+
+ 
+
+^ Back to Top
+
+ 
+
+Education
+
+UG: B.Tech/B.E. (Computer Science) from Annamalai University in 2009
+
+PG: MBA/PGDM (Marketing) from BHARATHIYAR UNIVERSITY in 2011
+
+ 
+
+ 
+
+^ Back to Top
+
+ 
+
+IT Skills
+
+Skill Name	Version	Last Used	Experience
+
+WINDOWS 2000,XP,vista, 7			
+
+Microsoft Office",2022-10-01 00:26:17.342890+00:00,,

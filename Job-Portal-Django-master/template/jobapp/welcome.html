@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- HOME -->
+
+
+<section class=" bg-light overlay inner-page bg-image p-2" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="font-weight-bold" style="color:teal; font-family: 'Handlee', cursive;">WELCOME TO JOBMAN</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash text-dark">/</span>
+          <span class="" style="color:teal; font-family: 'Handlee', cursive;"><strong>WELCOME</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <p>JOBMAN is an innovative job portal that helps Recruiters get the right candidates to fill
+                their vacancy. On this platform Applicants that apply to your job posting are ranked by comparing
+                the skills in your job posting to the skills in  their resume and these candidates are ranked in order to 
+                unburden of the effort of going through numerous resumes reading and analyzing it to get the right candidates.
+                JOBMAN GHANA has got your back. 
+            </p>
+            <p>We also offer services such as RESUME SEARCH ENGINES where you get to search for resumes that matches your 
+                description and get to invite or email this jobseekers.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

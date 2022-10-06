@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- HOME -->
+
+
+<section class=" bg-light overlay inner-page bg-image p-2" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="font-weight-bold" style="color:teal; font-family: 'Handlee', cursive;">Notifications</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash text-dark">/</span>
+          <span class="" style="color:teal; font-family: 'Handlee', cursive;"><strong>notifications</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-4">
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-12 p-2">
+              <h3 class="text-center">NOTIFICATIONS</h3>
+              {% for message in messages %}
+            
+              {% if message %}
+              <p>From:{{message.message_from.first_name}}</p>
+              <p>{{message.message}}</p>
+
+              {% else %}
+              <h4 class="text-center">NO NOTIFICATIONS</h4>
+
+              {% endif %}
+
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

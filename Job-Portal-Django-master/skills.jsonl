@@ -28,6 +28,9 @@
 {"label" : "SKILL", "pattern" : [{"TEXT": "docker"}]}
 {"label" : "SKILL", "pattern" : [{"TEXT": "Kubernetes"}]}
 {"label" : "SKILL", "pattern" : [{"TEXT": "flutter"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "engineering"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "accounting"}]}
+{"label" : "SKILL", "pattern" : [{"TEXT": "auditor"}]}
 {"label" : "SKILL", "pattern" : [{"LOWER": "machine"}, {"LOWER": "learning"}]}
 {"label" : "SKILL", "pattern" : [{"LOWER": "react"}, {"LOWER": "native"}]}
 {"label" : "SKILL", "pattern" : [{"LOWER": "artificial"}, {"LOWER": "intelligence"}]}
@@ -39,6 +42,16 @@
 {"label" : "SKILL", "pattern" : [{"LOWER": "C++"}, {"LOWER": "developer"}]}
 {"label" : "SKILL", "pattern" : [{"LOWER": "c#"}, {"LOWER": "developer"}]}
 {"label" : "SKILL", "pattern" : [{"LOWER": "python"}, {"LOWER": "developer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "industrial"}, {"LOWER": "engineer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "biomedical"}, {"LOWER": "engineer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "electrical"}, {"LOWER": "engineer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "telecommunication"}, {"LOWER": "engineer"}]}
+{"label" : "SKILL", "pattern" : [{"LOWER": "chemical"}, {"LOWER": "engineering"}]}
+
+
+
+
+
 
 
 

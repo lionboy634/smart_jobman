@@ -4,6 +4,7 @@
 {% block content %}
 
 <!-- HOME  home-section section-hero overlay bg-image  style="background-image: url('{% static 'images/hero_1.jpg' %}');" -->
+
 <section class="pt-5 overlay bg-image bg-light"  >
 
   <div class="container">
@@ -11,7 +12,7 @@
       <div class="col-md-12">
         <div class="mb-5 text-center">
           <h1 class="text-success font-weight-bold" style="font-family: 'Handlee', cursive;"  >JOBMAN GHANA</h1>
-          <p class="h5 text-success" >A sure place to get your dream job</p>
+          <p class="h5" style="color: dimgrey; " >A sure place to get your dream job</p>
         </div>
         {% if request.user.role == 'employee'  or request.user.is_anonymous %}
         <form method="GET" action="{% url 'jobapp:search_result' %}" class="search-jobs-form">
@@ -26,16 +27,18 @@
               {%csrf_token%}
 
   <div class="row mb-5 mx-auto">
-    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-4 mb-lg-2">
-      <input type="text"  name="skill" class="form-control form-control-lg" placeholder="skills ex. python, java, engineering">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-12 mb-4 mb-lg-2">
+      <input type="text"  name="skill" class="form-control form-control-lg" placeholder="Enter your job description here to get resumes of candidates that matches the description">
     </div>
+    <!--
     <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-4 mb-lg-2">
       <input type="text"  name="location" class="form-control form-control-lg" placeholder="Location">
     </div>
+  -->
    
     <div class="col-12 col-sm-6 col-md-6 col-lg-12 mb-4 mb-lg-0">
-      <button type="submit" class="btn btn-success btn-lg btn-block text-white btn-search"><span
-          class="icon-search icon mr-2"></span>Search Applicants</button>
+      <button type="submit" class="btn btn-lg btn-block text-white btn-search" style="background-color: teal;"><span
+          class="icon-search icon mr-2"></span>Search Resumes</button>
     </div>
   </div>
 
@@ -72,6 +75,24 @@
 
 </section>
 
+{%if request.user.is_authenticated%}
+{%if request.user.role == 'employee'%}
+<section class="pt-2 mt-2">
+  <div class="container">
+<div class="row align-items-center">
+  <div class="col-md-8">
+    <h2 class="" style="color:teal;">Want a good job matching?</h2>
+    <p class="mb-0 lead" style="color: teal;">Upload your resume for better recommendations</p>
+  </div>
+  <div class="col-md-3 ml-auto">
+    <a href="{% url 'account:edit-profile' request.user.id %}" class="btn btn-warning btn-block btn-lg">upload resume</a>
+    
+  </div>
+</div>
+</div>
+<section>
+  {%endif%}
+{%endif%}
 
 <section id="ajax_listing_paginattion" class="pt-4 mt-2">
   <div class="container">
@@ -128,22 +149,23 @@
 
 {% if request.user.is_authenticated %}
 {% if request.user.role == "employee" %}
+{% if request.user.resume_text %}
 <section class="pt-5">
   <div class="container">
     <h3 class="text-center text-dark">Jobs Recommended for you</h5>
     <div class="row">
-      {% for i, jobs in request.user.recommended_jobs.iterrows %}
+      {% for jobs in recommended_jobs %}
       <div class="col-md-10 mx-auto mb-2">
-        <a href="{% url 'jobapp:single-job' jobs.id %}">
+        <a href="{% url 'jobapp:single-job' jobs.1 %}">
         <div class="card p-1">
           <div class="d-flex align-items-center justify-content-between">
             <img src="{% static 'images/i.jpg' %}" alt="Free Website Template by Free-Template.co" />
             <div>
-              <p class="font-weight-bold">{{ jobs.title }}</p>
-              <p class="font-weight-bold">published by: {{ jobs.company_name }}</p>
+              <p class="font-weight-bold">{{ jobs.2 }}</p>
+              <p class="font-weight-bold">published by: {{ jobs.7 }}</p>
             </div>
             <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-              <span class="icon-room"></span> {{ jobs.location }}
+              <span class="icon-room"></span> {{ jobs.4 }}
             </div>
             <div>
               
@@ -151,8 +173,6 @@
             </div>
 
           </div>
-          
-
         </div>
       </a>
       </div>
@@ -164,9 +184,9 @@
   </div>
   
 </section>
-
-{% endif %}
-{% endif %}
+{%endif%}
+{%endif%}
+{%endif%}
 
 
 <section class="p-5 bg-light mb-3 text-center">
@@ -233,7 +253,6 @@
     {% endif %}
   </div>
 </section>
-
 
 
 {% endblock %}

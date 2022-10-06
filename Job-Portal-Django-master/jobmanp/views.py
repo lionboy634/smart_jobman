@@ -17,11 +17,16 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 # Create your views here.
 
+
+#loads the spacy models once the server starts running
 try:
     nlp = spacy.load('en_core_web_md')
     stopwords = stop_words.STOP_WORDS
+
+#skill_pattern_path contains a list of skills that the entity ruler use to extract skills
     skill_pattern_path = "skills.jsonl"
 
+#add entity ruler to nlp pipeline
     ruler = nlp.add_pipe("entity_ruler")
     ruler.from_disk(skill_pattern_path)
     #print(nlp.pipe_names)
@@ -29,6 +34,7 @@ try:
 except ImportError:
     print("Spacy's English Language Modules aren't present")
 
+#handle the file uploads
 def handle_uploaded_file(file, filename):
     if not os.path.exists('resume'):
         os.mkdir("resume")
@@ -37,7 +43,7 @@ def handle_uploaded_file(file, filename):
         for chunk in file.chunks():
             destination.write(chunk)
 
-
+#function convert text into tokens
 def tokenize(text):
     text = re.sub(r'[^\w\s]', '', text)
     token = []
@@ -46,12 +52,13 @@ def tokenize(text):
         token.append(str(tok))
     return token
 
+#function removes stopwords from text
 def remove_stopwords(text, stop=stopwords, optional_param=False, optional_words=[]):
     if optional_param:
         stop.append([a for a in optional_words ])
     return [word for word in text if word not in stop]
 
-
+#function converts each words in its base form ex. running-> run is->be
 def lemmatize(text):
     lemmatized = []
     sent = " ".join(text)
@@ -70,7 +77,7 @@ def remove_tags(text, post_tags=["PROPN", "NOUN", "ADV", "VERB", "ADB"]):
     return filtered
 
 
-
+#function returns a cleaned text after preprocessing the text
 def _base_clean(text):
     text = tokenize(text)
     text = remove_stopwords(text)
@@ -81,9 +88,11 @@ def _base_clean(text):
 
 #remove duplicated tokens or words
 def _reduce_redundancy(text):
-    #remove vords that repeat themselves
+    #remove words that repeat themselves
     return set(list(text))
 
+
+#Function targets the noun Part Of Speech(Noun) Proper nouns, commons nouns
 def _get_target_words(text):
     target = []
     sent = " ".join(text)
@@ -119,7 +128,7 @@ def read_resume(list_of_resume, resume_directory):
     return placeholder
 
 
-
+#function extracts skills from the resume
 def extract_skills(text):
     doc = nlp(text)
     skills = []

@@ -59,11 +59,15 @@ class Applicant(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
+    ranking = models.CharField(max_length=5, null=True, blank=True)
     timestamp = models.DateTimeField(auto_now=True, auto_now_add=False)
+
 
 
     def __str__(self):
         return self.job.title
+
+    
 
     @property
     def resume_ranking(self):
@@ -78,8 +82,15 @@ class Applicant(models.Model):
         description = nlp(desc_loc_title)
         resume_text = nlp(resume_text)
         scores  = description.similarity(resume_text)
-        return int((scores  * 100) - 10 )
+        return int( scores  * 100 )
 
+
+    def save(self, *args, **kwargs):
+        if self.ranking is None:
+            if self.user.resume_text:
+                self.ranking = self.resume_ranking
+            
+        super().save(*args, **kwargs)
     
 
         
@@ -192,3 +203,18 @@ class SearchResult(models.Model):
     job_type = models.CharField(choices=JOB_TYPE,max_length=30, null=True, blank=True)
     searched_on = models.DateTimeField(auto_now=True)
     ip_address = models.CharField(max_length=100, blank=True, null=True)
+
+
+
+
+class UserMessage(models.Model):
+    message = models.CharField(max_length=2000)
+    message_from = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_messaged_from"
+    )
+    message_to = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_message_to"
+    )
+    created_on = models.DateTimeField(auto_now_add=True)
+    job = models.ForeignKey(Job, null=True, blank=True, on_delete=models.SET_NULL)
+    is_read = models.BooleanField(default=False)
