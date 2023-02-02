@@ -218,3 +218,25 @@ class UserMessage(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     job = models.ForeignKey(Job, null=True, blank=True, on_delete=models.SET_NULL)
     is_read = models.BooleanField(default=False)
+
+
+
+class Recommendation(models.Model):
+    name = models.CharField(max_length=255)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
+    
+
+
+
+class Review(models.Model):
+    company = models.ForeignKey(User, on_delete=models.CASCADE)
+    review = models.TextField()
+    ratings = models.CharField(max_length=255)
+
+
+
+
+class EmailTemplate(models.Model):
+    name = models.CharField(max_length=255)
+    template = models.TextField()

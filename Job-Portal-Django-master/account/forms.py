@@ -55,6 +55,13 @@ class EmployeeRegistrationForm(UserCreationForm):
             raise forms.ValidationError("Gender is required")
         return gender
 
+
+    def clean(self):
+        error_count = 0
+        if self.password1 == self.password2:
+            raise forms.ValidationError("passwords dont match")
+
+
     def save(self, commit=True):
         user = UserCreationForm.save(self,commit=False)
         user.role = "employee"

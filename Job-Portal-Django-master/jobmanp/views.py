@@ -36,10 +36,10 @@ except ImportError:
 
 #handle the file uploads
 def handle_uploaded_file(file, filename):
-    if not os.path.exists('resume'):
-        os.mkdir("resume")
+    if not os.path.exists('media'):
+        os.mkdir("media")
 
-    with open("resume/" + filename, 'wb+') as destination:
+    with open("media/" + filename, 'wb+') as destination:
         for chunk in file.chunks():
             destination.write(chunk)
 

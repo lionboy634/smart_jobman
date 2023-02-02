@@ -94,6 +94,8 @@ class JobForm(forms.ModelForm):
         return category
 
 
+    
+
     def save(self, commit=True):
         job = super(JobForm, self).save(commit=False)
         if commit:

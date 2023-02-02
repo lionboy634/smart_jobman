@@ -29,7 +29,7 @@ from jobapp.forms import *
 from jobapp.models import *
 from jobapp.permission import *
 from jobmanp.views import *
-from dashboard.tasks import test_func, send_email, finder, recommend_job, save_search_results, alert_to_users
+from dashboard.tasks import test_func, send_email, recommend_job, save_search_results, alert_to_users, recommend_jobs_handler
 from jobmanp.views import nlp_wrapper, Cleaner, extract_skills
 
 User = get_user_model()
@@ -76,7 +76,7 @@ def home_view(request):
     
     #pass recommended jobs to templates if user is authenticated
     if request.user.is_authenticated:
-        content = finder.delay(request.user.resume_text)
+        content = recommend_jobs_handler.delay(request.user.resume_text)
     
     context = {
 
@@ -86,9 +86,19 @@ def home_view(request):
     'total_completed_jobs':len(published_jobs.filter(is_closed=True)),
     'page_obj': page_obj,
     'news' : news,
-    'recommended_jobs' : content.get() if request.user.is_authenticated else None
+    #'recommended_jobs' : content.get() if request.user.is_authenticated else None
     }
     return render(request, 'jobapp/index.html', context)
+
+
+
+
+def create_alert_search(request):
+    if request.method == "POST":
+        user = request.user
+        alert = JobAlert.objects.create()
+        alert.email = user.email
+        alert.name = request.search
 
 
 #function is responsible for handling jobseekers resume
@@ -126,6 +136,7 @@ def upload_resume(request):
             user.resume_text = resume_content
             user.save()
             applicant = Applicant.objects.filter(user=user)
+            recommend_jobs_handler.delay(resume_content)
             for app in applicant:
                 app.save()
             messages.success(request, 'Your Profile Was Successfully Updated!')
@@ -214,9 +225,7 @@ def job_list_View(request):
 @login_required(login_url=reverse_lazy('account:login'))
 @user_is_employer
 def create_job_View(request):
-    """
-    Provide the ability to create job post
-    """
+    """ Create new jobs here"""
     form = JobForm(request.POST or None)
 
     user = get_object_or_404(User, id=request.user.id)
@@ -246,9 +255,7 @@ def create_job_View(request):
 
 
 def single_job_view(request, id):
-    """
-    Provide the ability to view job details
-    """
+    """ View display particular jobs """
 
     job = get_object_or_404(Job, id=id)
     related_job_list = job.tags.similar_objects()

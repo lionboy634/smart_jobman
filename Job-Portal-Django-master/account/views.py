@@ -42,11 +42,7 @@ def employee_registration(request):
 
 
 def employer_registration(request):
-
-    """
-    Handle Employee Registration 
-
-    """
+    """ view handling employer registration """
 
     form = EmployerRegistrationForm(request.POST or None)
     if form.is_valid():

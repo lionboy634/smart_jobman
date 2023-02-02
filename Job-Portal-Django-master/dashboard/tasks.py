@@ -18,7 +18,7 @@ import pandas as pd
 from celery import shared_task
 from django.conf import settings
 from jobmanp.views import Cleaner, get_cleaned_words, read_resume, nlp_wrapper
-from jobapp.models import SearchResult, Skill
+from jobapp.models import SearchResult, Skill, Recommendation, EmailTemplate
 
 
 #nltk
@@ -38,7 +38,7 @@ def test_func(self):
 
 #function finds jobs that match the resumes of candidates
 @shared_task(bind=True)
-def finder(self, resume_text):
+def recommend_jobs_handler(self, resume_text):
     final_jobs = pd.read_csv("final_job.csv")
     if resume_text is not None:
         resume_data = str(resume_text)
@@ -55,7 +55,13 @@ def finder(self, resume_text):
         final_jobs = final_jobs.sort_values(by='score', ascending=False)
         #final_jobs = final_jobs[:5]
         final_jobs = final_jobs[final_jobs['score'] > 0.6 ][:5]
-        return final_jobs.values.tolist()
+        #return final_jobs.values.tolist()
+        if len(final_jobs > 0):
+            for jobs in final_jobs:
+                found_jobs = Job.objects.filter(id=jobs.id)
+                recommended_jobs = Recommendation.objects
+                recommended_jobs.create(found_jobs)
+
     else:
         return [""]
    
@@ -110,6 +116,8 @@ def recommend_job(self, job_desc):
 
 
 
+
+
 @app.task
 def extract_news_data():
     headers = {'Authorization': 'b7de039e294740bb84d8dff8c2bbf97d'}
@@ -134,13 +142,12 @@ def extract_news_data():
 @app.task
 def send_email(mto, msubject, mbody):
     if type(mto) != "list":
-        #convert string into a list class
         mto = [mto]
-    mail  = send_mail(msubject, strip_tags(mbody), settings.EMAIL_HOST_USER , mto, html_message=mbody, fail_silently=False)
+    template = EmailTemplate.objects.filter(id=1)
+    mail  = send_mail(msubject, strip_tags(mbody), settings.EMAIL_HOST_USER , mto, html_message=template.template, fail_silently=False)
     if mail:
         return "mail sent successfully"
-    #mail.content_subtype = 'html'
-    #mail.send()
+   
 
 
 #function that periodically updates job postings in the system
@@ -236,11 +243,13 @@ def alert_to_users():
                 user_skills.append(skill.strip())
         job = job_post.filter(Q(tags__name__in=user_skills) | Q(location=user_location))
         t = loader.get_template("jobapp/alerts.html")
-        c = { "jobposts" : job.distinct()[:10], "user" : job_user }
-        subject = "JOB ALERT FOR TOP MATCHING JOBS"
-        rendered = t.render(c)
-        mto = job_user.email
-        send_email.delay(mto, subject, rendered)
+        if len(job) > 0: 
+            #template = EmailTemplate.objects.filter(id=1)
+            c = { "jobposts" : job.distinct()[:10], "user" : job_user }
+            subject = "JOB ALERT FOR TOP MATCHING JOBS"
+            rendered = t.render(c)  
+            mto = job_user.email
+            send_email.delay(mto, subject, rendered)
 
 
 
@@ -253,7 +262,7 @@ def save_search_results(user, ip_address, skill , location, job_type):
     search_result = SearchResult.objects.create(ip_address=ip_address)
     if skill:
         search_result.skill = skill
-    if location:
+    if location: 
         search_result.location = location
     if job_type:
         search_result.job_type = job_type
@@ -275,14 +284,20 @@ def jobs_based_on_activity():
     users = User.objects.filter(role="employee")
     for user in users:
         search_results = SearchResult.objects.filter(user=user)
-        for result in search_results:
-            location = result.location
-            job_type = result.job_type
-            skill = result.skill
-            if job_type or skill:
-                job_list = Job.objects.filter(
-                    Q(tags__name__in=skill) |
-                (
-                    Q(job_type = job_type)
-                )
-                )
+        if len(search_results) > 7:
+            for result in search_results:
+                location = result.location
+                job_type = result.job_type
+                skill = result.skill
+                if job_type or skill:
+                    job_list = Job.objects.filter(
+                        Q(tags__name__in=skill) |
+                    (
+                        Q(job_type = job_type)
+                    )
+                    )
+                    if len(job_list) > 0:
+                        for new_job in job_list:
+                            check_job = Recommendation.objects.filter(job=new_job, user=user)
+                            if not check_job:
+                                Recommendation.objects.create(job=new_job, user=user)
